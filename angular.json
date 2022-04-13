@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "packageManager": "yarn"
+  },
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "strict": false
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "avidcaster",
+  "projects": {
+    "agx-assets": "libs/agx-assets",
+    "agx-dto": "libs/agx-dto",
+    "agx-util": "libs/agx-util",
+    "api": "apps/api",
+    "avidcaster": "apps/avidcaster",
+    "avidcaster-e2e": "apps/avidcaster-e2e",
+    "ngx-annotator": "libs/ngx-annotator",
+    "ngx-auth": "libs/ngx-auth",
+    "ngx-chat": "libs/ngx-chat",
+    "ngx-fireworks": "libs/ngx-fireworks",
+    "ngx-gql": "libs/ngx-gql",
+    "ngx-layout": "libs/ngx-layout",
+    "ngx-material": "libs/ngx-material",
+    "ngx-msg": "libs/ngx-msg",
+    "ngx-shared": "libs/ngx-shared",
+    "ngx-system": "libs/ngx-system",
+    "ngx-uix": "libs/ngx-uix",
+    "ngx-user": "libs/ngx-user",
+    "nsx-auth": "libs/nsx-auth",
+    "nsx-common": "libs/nsx-common",
+    "nsx-i18n": "libs/nsx-i18n",
+    "nsx-mailer": "libs/nsx-mailer",
+    "nsx-prisma": "libs/nsx-prisma",
+    "nsx-system": "libs/nsx-system",
+    "nsx-user": "libs/nsx-user"
+  }
+}

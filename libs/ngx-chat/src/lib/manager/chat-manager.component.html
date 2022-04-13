@@ -1,0 +1,28 @@
+<div id="chat-manager-header" #scrollableList [dir]="chatService.state.isLtR ? 'ltr' : 'rtl'">
+  <fullerstack-chat-list></fullerstack-chat-list>
+</div>
+<div id="chat-manager-middle">
+  <div fxLayout="column" fxLayoutGap="5px">
+    <mat-divider></mat-divider>
+    <div fxLayoutAlign="space-around center">
+      <fullerstack-chat-filter> </fullerstack-chat-filter>
+    </div>
+    <mat-divider></mat-divider>
+    <div fxLayoutAlign="space-around center">
+      <fullerstack-chat-menu> </fullerstack-chat-menu>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>
+<div id="chat-manager-footer" [ngStyle]="{ backgroundColor: backgroundColor }">
+  <div
+    id="chat-selected"
+    [ngStyle]="{ left: leftPosition, right: rightPosition }"
+    [class.chat-invisible]="!(chatService.chatSelected$ | async)?.author"
+  >
+    <fullerstack-chat-selected></fullerstack-chat-selected>
+  </div>
+  <div id="chat-fireworks" [class.chat-invisible]="!chatService.state.fireworksEnabled">
+    <fullerstack-fireworks [action]="chatService.isFireworksPlaying"></fullerstack-fireworks>
+  </div>
+</div>

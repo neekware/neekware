@@ -1,0 +1,11 @@
+<fullerstack-menu class="menu" [ngStyle]="{ top: 0, right: 0, color: annotation.state.menuColor }"> </fullerstack-menu>
+<div id="draw-board">
+  <canvas
+    id="draw-canvas"
+    class="draw-box"
+    [ngClass]="eraserCursorClass"
+    [ngStyle]="{ background: annotation.state.bgColor, cursor: annotation.state.cursor ? 'default' : 'none' }"
+    #annotationCanvas
+  ></canvas>
+  <svg id="draw-svg" class="draw-box" #annotationSvg></svg>
+</div>

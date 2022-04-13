@@ -13,8 +13,102 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "app-server:api-nest",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:nax-util",
+                  "scope:nsx-data",
+                  "scope:nsx-util"
+                ]
+              },
+              {
+                "sourceTag": "app-client:avidcaster",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:ngx-data",
+                  "scope:ngx-util",
+                  "scope:ngx-ui",
+                  "scope:ngx-shared",
+                  "scope:ngx-feature"
+                ]
+              },
+              {
+                "sourceTag": "app-e2e:avidcaster-e2e",
+                "onlyDependOnLibsWithTags": ["app-client:avidcaster"]
+              },
+              {
+                "sourceTag": "scope:ngx-util",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:ngx-data",
+                  "scope:ngx-util"
+                ]
+              },
+              {
+                "sourceTag": "scope:ngx-shared",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:ngx-data",
+                  "scope:ngx-util",
+                  "scope:ngx-ui"
+                ]
+              },
+              {
+                "sourceTag": "scope:nax-util",
+                "onlyDependOnLibsWithTags": ["scope:agx-data", "scope:agx-util", "scope:nax-util"]
+              },
+              {
+                "sourceTag": "scope:agx-data",
+                "onlyDependOnLibsWithTags": ["scope:agx-data"]
+              },
+              {
+                "sourceTag": "scope:agx-util",
+                "onlyDependOnLibsWithTags": ["scope:agx-data", "scope:agx-util"]
+              },
+              {
+                "sourceTag": "scope:ngx-data",
+                "onlyDependOnLibsWithTags": ["scope:agx-data", "scope:agx-util", "scope:ngx-data"]
+              },
+              {
+                "sourceTag": "scope:ngx-ui",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:ngx-data",
+                  "scope:ngx-util",
+                  "scope:ngx-shared",
+                  "scope:ngx-ui"
+                ]
+              },
+              {
+                "sourceTag": "scope:ngx-feature",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:ngx-data",
+                  "scope:ngx-util",
+                  "scope:ngx-shared",
+                  "scope:ngx-ui",
+                  "scope:ngx-i18n"
+                ]
+              },
+              {
+                "sourceTag": "scope:nsx-data",
+                "onlyDependOnLibsWithTags": ["scope:agx-data", "scope:agx-util", "scope:nsx-data"]
+              },
+              {
+                "sourceTag": "scope:nsx-util",
+                "onlyDependOnLibsWithTags": [
+                  "scope:agx-data",
+                  "scope:agx-util",
+                  "scope:nax-util",
+                  "scope:nsx-data",
+                  "scope:nsx-util"
+                ]
               }
             ]
           }

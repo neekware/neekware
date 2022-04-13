@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 
+
 # dependencies
 /node_modules
 
@@ -28,8 +29,10 @@
 /.sass-cache
 /connect.lock
 /coverage
+/graph
 /libpeerconnection.log
 npm-debug.log
+package-lock.json
 yarn-error.log
 testem.log
 /typings
@@ -37,3 +40,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Prsima
+.env
+dev.db*
+
+# nx migrations
+migrations.json

@@ -1,7 +1,0 @@
-{
-  "version": 2,
-  "projects": {
-    "neekware": "apps/neekware",
-    "neekware-e2e": "apps/neekware-e2e"
-  }
-}
