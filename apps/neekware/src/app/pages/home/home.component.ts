@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       title: 'How to engage with us',
       description:
-        'Reach out to us via email, phone, or chat. Tell us what you need, and we will get back to you as soon as possible with a statement of work. We work with you to finalize the details of your project, and we will provide you with a quote. We will then work with you to get the project started. We will also provide ongoing consulting services, and train the staff.',
+        'Reach out to us via email, phone. Tell us about your needs, and we will get back to you as soon as possible with a statement of work. From there we work with you to finalize the details of your project, followed by a detailed quote. We will then work with you to get the project started. You can count on us on providing you with ongoing consulting services.',
       image: '/assets/images/misc/process-card.png',
     },
   ];
