@@ -1,8 +1,8 @@
-# <a href="chat/manager/admin"><img style="margin-bottom: -6px" width="30" src="./assets/images/logos/logo-small.png"></a> `AvidCaster's Chat Manager - Overview`
+# <a href="chat/manager/admin"><img style="margin-bottom: -6px" width="30" src="./assets/images/logos/logo-small.png"></a> `Neekware's Chat Manager - Overview`
 
 ## `Description`
 
-`Avidcaster`'s chat manager provides a better live chat management experience and as well as lower-third [video chat overlay](chat/manager/admin).
+`Neekware`'s chat manager provides a better live chat management experience and as well as lower-third [video chat overlay](chat/manager/admin).
 
 ## `Overview`
 
@@ -14,7 +14,7 @@
 
 **To further simplify** the process, we've created a **Live Chat Manager**, that supports `YouTube` and `Twitch` Live Chats. The Live Chat Manager, includes powerful filters, to ensure the instructor is not overwhelmed with cross-talk noise amongst the audience. This way, the students can readily communicate amongst themselves, and only relevant chats are pushed up to the instructor.
 
-**With remote classroom** requirements during the covid pandemic, The AvidCaster Live Chat Manager could be a game-changer, that may bring a calmer "state of mind" to both the teachers and the students alike.
+**With remote classroom** requirements during the covid pandemic, The Neekware Live Chat Manager could be a game-changer, that may bring a calmer "state of mind" to both the teachers and the students alike.
 
 ## `Viewer` - Chat Overlay (seen by live stream viewers)
 
@@ -85,7 +85,7 @@ The following image is the control panel used by the admin/owner of the YouTube 
     - On - ready to be cropped with `mask` feature of video switcher such as ATEM or OBS etc.
     - Off - ready to move the browser window around
 - Home
-  - Takes you back to [Avidcaster](https://avidcaster.net) main page
+  - Takes you back to [Neekware](https://neekware.net) main page
 
 <br/>
 

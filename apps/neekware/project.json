@@ -1,23 +1,23 @@
 {
   "projectType": "application",
-  "root": "apps/avidcaster",
-  "sourceRoot": "apps/avidcaster/src",
-  "prefix": "avidcaster",
+  "root": "apps/neekware",
+  "sourceRoot": "apps/neekware/src",
+  "prefix": "neekware",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "allowedCommonJsDependencies": ["zen-observable", "graphql-tag"],
-        "outputPath": "dist/apps/avidcaster",
-        "index": "apps/avidcaster/src/index.html",
-        "main": "apps/avidcaster/src/main.ts",
-        "polyfills": "apps/avidcaster/src/polyfills.ts",
-        "tsConfig": "apps/avidcaster/tsconfig.app.json",
+        "outputPath": "dist/apps/neekware",
+        "index": "apps/neekware/src/index.html",
+        "main": "apps/neekware/src/main.ts",
+        "polyfills": "apps/neekware/src/polyfills.ts",
+        "tsConfig": "apps/neekware/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/avidcaster/src/favicon.ico",
-          "apps/avidcaster/src/assets",
+          "apps/neekware/src/favicon.ico",
+          "apps/neekware/src/assets",
           {
             "glob": "**/*",
             "input": "libs/agx-assets/src/lib/styles/css",
@@ -55,7 +55,7 @@
           }
         ],
         "styles": [
-          "apps/avidcaster/src/styles.scss",
+          "apps/neekware/src/styles.scss",
           "node_modules/prismjs/themes/prism-okaidia.css",
           "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css"
         ],
@@ -85,8 +85,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/avidcaster/src/environments/environment.ts",
-              "with": "apps/avidcaster/src/environments/environment.prod.ts"
+              "replace": "apps/neekware/src/environments/environment.ts",
+              "with": "apps/neekware/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -94,8 +94,8 @@
         "electron": {
           "fileReplacements": [
             {
-              "replace": "apps/avidcaster/src/environments/environment.ts",
-              "with": "apps/avidcaster/src/environments/environment.electron.ts"
+              "replace": "apps/neekware/src/environments/environment.ts",
+              "with": "apps/neekware/src/environments/environment.electron.ts"
             }
           ],
           "outputHashing": "all"
@@ -115,48 +115,48 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "avidcaster:build:production",
-          "proxyConfig": "apps/avidcaster/proxy/proxy.prod.json"
+          "browserTarget": "neekware:build:production",
+          "proxyConfig": "apps/neekware/proxy/proxy.prod.json"
         },
         "ci": {
-          "browserTarget": "avidcaster:build:production",
-          "proxyConfig": "apps/avidcaster/proxy/proxy.ci.json"
+          "browserTarget": "neekware:build:production",
+          "proxyConfig": "apps/neekware/proxy/proxy.ci.json"
         },
         "electron": {
-          "browserTarget": "avidcaster:build:production",
-          "proxyConfig": "apps/avidcaster/proxy/proxy.electron.json"
+          "browserTarget": "neekware:build:production",
+          "proxyConfig": "apps/neekware/proxy/proxy.electron.json"
         },
         "development": {
-          "browserTarget": "avidcaster:build:development"
+          "browserTarget": "neekware:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "browserTarget": "avidcaster:build:development",
-        "proxyConfig": "apps/avidcaster/proxy/proxy.dev.json"
+        "browserTarget": "neekware:build:development",
+        "proxyConfig": "apps/neekware/proxy/proxy.dev.json"
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "avidcaster:build"
+        "browserTarget": "neekware:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/avidcaster/src/**/*.ts", "apps/avidcaster/src/**/*.html"]
+        "lintFilePatterns": ["apps/neekware/src/**/*.ts", "apps/neekware/src/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/avidcaster"],
+      "outputs": ["coverage/apps/neekware"],
       "options": {
-        "jestConfig": "apps/avidcaster/jest.config.js",
+        "jestConfig": "apps/neekware/jest.config.js",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["app-client:avidcaster"],
+  "tags": ["app-client:neekware"],
   "implicitDependencies": ["agx-assets"]
 }

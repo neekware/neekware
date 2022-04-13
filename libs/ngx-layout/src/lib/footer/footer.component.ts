@@ -32,7 +32,7 @@ export class FooterComponent {
         },
         {
           name: _('COMMON.GITHUB'),
-          link: 'https://github.com/AvidCaster',
+          link: 'https://github.com/Neekware',
           icon: 'github',
           external: true,
         },
@@ -65,7 +65,7 @@ export class FooterComponent {
         },
         {
           name: _('COMMON.TERMS_CONDITIONS'),
-          link: 'info@avidcaster.net',
+          link: 'info@neekware.net',
           icon: 'email',
           email: true,
         },

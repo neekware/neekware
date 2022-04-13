@@ -52,9 +52,9 @@ const i18nConfig: I18nConfig = {
 };
 
 export const environment = {
-  siteName: 'AvidCaster',
-  siteUrl: 'https://avidcaster.co',
-  siteSupportEmail: 'support@avidcaster.co',
+  siteName: 'Neekware',
+  siteUrl: 'https://neekware.co',
+  siteSupportEmail: 'support@neekware.co',
   production: false,
   port: 4401,
   prefix: 'api',

@@ -62,4 +62,4 @@ Alert and Notification
 
 <br/><br/>
 
-# Explore more features at: ( [avidcaster.co](https://app.avidcaster.co/forex/100/USD/EUR) )
+# Explore more features at: ( [neekware.co](https://app.neekware.co/forex/100/USD/EUR) )

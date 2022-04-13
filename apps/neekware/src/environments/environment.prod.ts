@@ -18,21 +18,8 @@ import { LogLevel, LoggerConfig } from '@fullerstack/ngx-logger';
 import { StoreConfig } from '@fullerstack/ngx-store';
 import { UserConfig } from '@fullerstack/ngx-user';
 
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
-
 const logger: LoggerConfig = {
-  level: LogLevel.debug,
+  level: LogLevel.error,
 } as const;
 
 const gql: GqlConfig = {
@@ -91,11 +78,11 @@ const i18n: I18nConfig = {
 };
 
 const auth: AuthConfig = {
-  logState: true,
+  logState: false,
 } as const;
 
 const user: UserConfig = {
-  logState: true,
+  logState: false,
 } as const;
 
 const store: StoreConfig = {
@@ -121,9 +108,9 @@ const chat: ChatConfig = {
 
 export const environment: Readonly<ApplicationConfig> = {
   version: '0.0.1',
-  production: false,
+  production: true,
   platform: 'web',
-  appName: 'AvidCaster-Dev',
+  appName: 'Neekware',
   logger,
   i18n,
   gql,

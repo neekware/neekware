@@ -174,7 +174,7 @@ export const canvasToZip = async (
 
   // create blob of images and add to zip file
   const originalCanvasBlob = await canvasToBlob(canvasEl, mime, quality);
-  zip.file(`AvidCaster-Annotator-Image-${time}.png`, originalCanvasBlob);
+  zip.file(`Neekware-Annotator-Image-${time}.png`, originalCanvasBlob);
 
   // randomize the canvas by adding for random colors to 4 random pixels
   // convert to base64 and hash it (one way hash)
@@ -184,17 +184,17 @@ export const canvasToZip = async (
 
   // create blob of the randomize canvas and add to zip file
   const randomizedCanvasBlob = await canvasToBlob(randomizedCanvas);
-  zip.file(`AvidCaster-Annotator-Image-Signature-${time}.txt`, randomizedBase64Hashed);
-  zip.file(`AvidCaster-Annotator-Image-Signed-${time}.png`, randomizedCanvasBlob);
+  zip.file(`Neekware-Annotator-Image-Signature-${time}.txt`, randomizedBase64Hashed);
+  zip.file(`Neekware-Annotator-Image-Signed-${time}.png`, randomizedCanvasBlob);
 
   // add a readme file to the zip file
   zip.file(
     `Readme.txt`,
-    `This is a zip file created by AvidCaster Annotator, @ https://avidcaster.net\n
+    `This is a zip file created by Neekware Annotator, @ https://neekware.net\n
     - Readme.txt - Instructions.\n
-    - AvidCaster-Annotator-Image-${time}.png - Original hand-drawn image.\n
-    - AvidCaster-Annotator-Image-Signed-${time}.png - Randomized version of the original hand-drawn image.\n
-    - AvidCaster-Annotator-Image-Signature-${time}.txt - Signature of the randomized version.\n
+    - Neekware-Annotator-Image-${time}.png - Original hand-drawn image.\n
+    - Neekware-Annotator-Image-Signed-${time}.png - Randomized version of the original hand-drawn image.\n
+    - Neekware-Annotator-Image-Signature-${time}.txt - Signature of the randomized version.\n
     ================\n
     Instructions:\n
     1. To register the image as an NFT, use the original image.\n

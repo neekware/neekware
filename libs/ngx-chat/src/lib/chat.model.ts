@@ -36,8 +36,8 @@ export enum ChatUpstreamAction {
 }
 
 export enum ChatScreenDirection {
-  NorthBound = 'avidcaster-chat-north-bound',
-  SouthBound = 'avidcaster-chat-south-bound',
+  NorthBound = 'neekware-chat-north-bound',
+  SouthBound = 'neekware-chat-south-bound',
 }
 
 export enum ChatMessageType {

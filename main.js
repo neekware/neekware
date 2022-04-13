@@ -8,10 +8,10 @@ const createWindow = () => {
     height: 600,
     backgroundColor: '#000000',
     autoHideMenuBar: true,
-    icon: `file://${__dirname}/dist/apps/avidcaster/assets/images/logos/logo.png`,
+    icon: `file://${__dirname}/dist/apps/neekware/assets/images/logos/logo.png`,
   });
 
-  win.loadURL(`file://${__dirname}/dist/apps/avidcaster/index.html`);
+  win.loadURL(`file://${__dirname}/dist/apps/neekware/index.html`);
 
   // Uncomment the DevTools below during development (debugging)
   // win.webContents.openDevTools();

@@ -32,14 +32,14 @@
       "style": "scss"
     }
   },
-  "defaultProject": "avidcaster",
+  "defaultProject": "neekware",
   "projects": {
     "agx-assets": "libs/agx-assets",
     "agx-dto": "libs/agx-dto",
     "agx-util": "libs/agx-util",
     "api": "apps/api",
-    "avidcaster": "apps/avidcaster",
-    "avidcaster-e2e": "apps/avidcaster-e2e",
+    "neekware": "apps/neekware",
+    "neekware-e2e": "apps/neekware-e2e",
     "ngx-annotator": "libs/ngx-annotator",
     "ngx-auth": "libs/ngx-auth",
     "ngx-chat": "libs/ngx-chat",

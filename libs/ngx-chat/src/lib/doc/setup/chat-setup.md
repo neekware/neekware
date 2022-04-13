@@ -1,8 +1,8 @@
-# <a href="chat/manager/admin"><img style="margin-bottom: -6px" width="30" src="./assets/images/logos/logo-small.png"></a> `AvidCaster's Chat Manager - Setup`
+# <a href="chat/manager/admin"><img style="margin-bottom: -6px" width="30" src="./assets/images/logos/logo-small.png"></a> `Neekware's Chat Manager - Setup`
 
 ## `Description`
 
-`Avidcaster`'s chat manager works with `Google Chrome`, `Brave Browser`, `Chromium Browser` and `Microsoft Edge` extensions in providing a low-cost live chat management, as well as lower-third [video chat overlay](chat/manager/admin).
+`Neekware`'s chat manager works with `Google Chrome`, `Brave Browser`, `Chromium Browser` and `Microsoft Edge` extensions in providing a low-cost live chat management, as well as lower-third [video chat overlay](chat/manager/admin).
 
 Supported chats: `YouTube` & `Twitch`.
 
@@ -10,11 +10,11 @@ Supported chats: `YouTube` & `Twitch`.
 
 ## `Installation`
 
-Install the <a href="https://chrome.google.com/webstore/detail/avidcaster-chat-overlay/hjccfhnlacfanigjnfngjmeekjmnajng" target="_blank">Avidcaster's Chat Manager</a> extension.
+Install the <a href="https://chrome.google.com/webstore/detail/neekware-chat-overlay/hjccfhnlacfanigjnfngjmeekjmnajng" target="_blank">Neekware's Chat Manager</a> extension.
 
 ## `Configure Ad, Popup blockers`
 
-Visit <a href="https://avidcaster.net" target="_blank">https://avidcaster.net</a>, and **disable** **ad** and **popup** blocker on **avidcaster.net** so it can process your incoming chats.
+Visit <a href="https://neekware.net" target="_blank">https://neekware.net</a>, and **disable** **ad** and **popup** blocker on **neekware.net** so it can process your incoming chats.
 
 ## `Open YouTube Chat Manager - Popup`
 
@@ -24,7 +24,7 @@ Open a your live YouTube stream and click on the Popup Chat button, as per the f
 <img src="./assets/images/howto/YoutubeChatPopup.png" style="margin: 0 auto; width:100%;"/>
 </p>
 
-## `AvidCaster Chat Manager - Popup`
+## `Neekware Chat Manager - Popup`
 
 Click on "Open Chat Manager" as per the following image.
 
@@ -32,7 +32,7 @@ Click on "Open Chat Manager" as per the following image.
 <img src="./assets/images/howto/ChatPopup.png" style="margin: 0 auto; width:100%;"/>
 </p>
 
-## `AvidCaster Chat Manager Admin Dashboard`
+## `Neekware Chat Manager Admin Dashboard`
 
 Chat Manager Admin Dashboard will pop out as per the following image.
 
@@ -44,7 +44,7 @@ Chat Manager Admin Dashboard will pop out as per the following image.
 
 Setup Video Switcher as per your need. Here is an example of Upstream Luma Key used in Atem Control Center.
 
-Example: Fill / Source are the dedicated computer that is running the Avidcaster Overlay Admin in fullscreen.
+Example: Fill / Source are the dedicated computer that is running the Neekware Overlay Admin in fullscreen.
 Play with the mask, clip/grain to fine tune as per your liking.
 
 <p>

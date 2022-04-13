@@ -52,7 +52,7 @@ export const CHAT_IFRAME_URL = '/chat/iframe';
 export const CHAT_MANAGER_ADMIN_URL = '/chat/manager/admin';
 export const CHAT_URL_FULLSCREEN_LIST = [CHAT_IFRAME_URL, CHAT_MANAGER_ADMIN_URL];
 
-export const CHAT_STORAGE_KEY_PREFIX = 'avidcaster-chat';
+export const CHAT_STORAGE_KEY_PREFIX = 'neekware-chat';
 export const CHAT_STORAGE_BROADCAST_KEY_PREFIX = `${CHAT_STORAGE_KEY_PREFIX}-broadcast`;
 export const CHAT_STORAGE_MESSAGE_HEARTBEAT_KEY = `${CHAT_STORAGE_BROADCAST_KEY_PREFIX}-heartbeat`;
 export const CHAT_STORAGE_MANAGER_IFRAME_REQUEST_KEY = `${CHAT_STORAGE_BROADCAST_KEY_PREFIX}-iframe-request`;
@@ -62,17 +62,17 @@ export const CHAT_STORAGE_STATE_KEY = `${CHAT_STORAGE_KEY_PREFIX}-storage-state`
 export const CHAT_YOUTUBE_DEFAULT_AVATAR = './assets/images/misc/avatar-default-youtube.png';
 export const CHAT_TWITCH_DEFAULT_AVATAR = './assets/images/misc/avatar-default-twitch.png';
 export const CHAT_DEFAULT_AVATAR = './assets/images/misc/avatar-default-red.png';
-export const CHAT_DEFAULT_LOGO = './assets/images/misc/avidcaster-chat-x128.png';
+export const CHAT_DEFAULT_LOGO = './assets/images/misc/neekware-chat-x128.png';
 
-export const CHAT_DEFAULT_PREFIX = 'avidcaster';
+export const CHAT_DEFAULT_PREFIX = 'neekware';
 
 /**
  * Default configuration - Layout module
  */
 const WelcomeChat: ChatMessageItem = {
-  author: 'AvidCaster',
-  message: 'Welcome to AvidCaster Chat Manager Admin!',
-  html: 'Welcome to AvidCaster Chat Manager Admin!',
+  author: 'Neekware',
+  message: 'Welcome to Neekware Chat Manager Admin!',
+  html: 'Welcome to Neekware Chat Manager Admin!',
   avatarUrl: CHAT_DEFAULT_LOGO,
   messageType: ChatMessageType.Common,
   streamId: CHAT_DEFAULT_PREFIX,

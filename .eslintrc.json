@@ -23,7 +23,7 @@
                 ]
               },
               {
-                "sourceTag": "app-client:avidcaster",
+                "sourceTag": "app-client:neekware",
                 "onlyDependOnLibsWithTags": [
                   "scope:agx-data",
                   "scope:agx-util",
@@ -35,8 +35,8 @@
                 ]
               },
               {
-                "sourceTag": "app-e2e:avidcaster-e2e",
-                "onlyDependOnLibsWithTags": ["app-client:avidcaster"]
+                "sourceTag": "app-e2e:neekware-e2e",
+                "onlyDependOnLibsWithTags": ["app-client:neekware"]
               },
               {
                 "sourceTag": "scope:ngx-util",

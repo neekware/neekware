@@ -1,4 +1,4 @@
-# Avidcaster
+# Neekware
 
 [![status-image]][status-link]
 [![coverage-image]][coverage-link]
@@ -13,7 +13,7 @@ To create an open source web application to bring `Quality of Experience` during
 
 ## Features
 
-- Annotation, Telestation (status: done - https://avidcaster.net/annotate/draw)
+- Annotation, Telestation (status: done - https://neekware.net/annotate/draw)
   - Simplicity with Intuitive menu
   - Mobile or PC supported
   - Finger / Pen enabled

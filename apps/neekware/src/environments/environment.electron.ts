@@ -13,5 +13,5 @@ import { environment as prodEnv } from './environment.prod';
 export const environment: Readonly<ApplicationConfig> = {
   ...prodEnv,
   platform: 'electron',
-  appName: 'AvidCaster',
+  appName: 'Neekware',
 };

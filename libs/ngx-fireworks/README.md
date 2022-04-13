@@ -6,4 +6,4 @@ This library was generated with [Nx](https://nx.dev).
 
 Run `nx test ngx-fireworks` to execute the unit tests.
 
-Ref: https://github.com/AvidCaster/fireworks
+Ref: https://github.com/Neekware/fireworks
