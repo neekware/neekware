@@ -1,4 +1,4 @@
-# Fullerstack - Visual Features
+# Visual Features
 
 <br/>
 
