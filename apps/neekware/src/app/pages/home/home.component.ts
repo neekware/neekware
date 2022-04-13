@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       title: 'Our technology stack',
       description:
-        'We use the latest technologies to build the best products for you. Our stack is built with mono-repositories, so you can develop and deploy multiple applications easily. We use Typescript, throughout our stack, the frontend, backend, and anything in between. We can build teams for you, train the staff, and provide ongoing consulting services. Our second language is Python, along with Django framework. GraphQL is our primary backends endpoint, with also support REST. We use a variety of tools to help you manage your code, including Git, Jira, Slack, and Bitbucket.',
+        "We use the latest technologies to build the best products for you. Our stack is built with mono-repositories, so you can develop and deploy multiple applications easily. Our first language is Typescript, throughout our stack, the frontend, backend, and anything in between. Our second language is Python, along with Django framework. GraphQL is our backend's primary endpoint, while we fully support REST API.  We can build teams for you, train the staff, and provide ongoing consulting services. We use a variety of tools to help you manage your code, including Git, Jira, Slack, and Bitbucket.",
       image: '/assets/images/misc/techstack-card.png',
     },
     {
