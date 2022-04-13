@@ -34,6 +34,7 @@ import { AppRoutes } from './app.routing';
 import { AboutComponent } from './pages/about/about.component';
 import { ClientsOverviewComponent } from './pages/clients/clients.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { CorpComponent } from './pages/corp/corp.component';
 import { EmailChangePerformComponent } from './pages/email-change-perform/email-change-perform.component';
 import { EmailChangeRequestComponent } from './pages/email-change-request/email-change-request.component';
 import { FeaturesOverviewComponent } from './pages/features/features.features.';
@@ -69,6 +70,7 @@ import { UserVerifyComponent } from './pages/user-verify/user-verify.component';
     TermsComponent,
     ClientsOverviewComponent,
     FeaturesOverviewComponent,
+    CorpComponent,
   ],
   imports: [
     BrowserModule,

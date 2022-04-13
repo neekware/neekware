@@ -33,7 +33,7 @@ export class FooterComponent {
         },
         {
           name: _('COMMON.GITHUB'),
-          link: 'https://github.com/Neekware',
+          link: 'https://github.com/neekware/fullerstack',
           icon: 'github',
           external: true,
         },
@@ -48,10 +48,9 @@ export class FooterComponent {
           icon: 'domain',
         },
         {
-          name: _('COMMON.CONTACT_US'),
-          link: 'info@neekware.net',
-          icon: 'email',
-          email: true,
+          name: _('COMMON.CORP'),
+          link: '/corp/overview',
+          icon: 'bank-outline',
         },
       ],
     },

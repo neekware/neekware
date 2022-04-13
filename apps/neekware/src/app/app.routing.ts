@@ -14,6 +14,7 @@ import { DeactivateGuard } from '@fullerstack/ngx-shared';
 import { AboutComponent } from './pages/about/about.component';
 import { ClientsOverviewComponent } from './pages/clients/clients.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { CorpComponent } from './pages/corp/corp.component';
 import { EmailChangePerformComponent } from './pages/email-change-perform/email-change-perform.component';
 import { EmailChangeRequestComponent } from './pages/email-change-request/email-change-request.component';
 import { FeaturesOverviewComponent } from './pages/features/features.features.';
@@ -173,6 +174,14 @@ export const AppRoutes: Routes = [
     data: {
       title: _('CLIENTS.OVERVIEW'),
       description: _('CLIENTS.OVERVIEW_DESC'),
+    },
+  },
+  {
+    path: 'corp/overview',
+    component: CorpComponent,
+    data: {
+      title: _('COMMON.CORP'),
+      description: _('CORP.OVERVIEW_DESC'),
     },
   },
   {
