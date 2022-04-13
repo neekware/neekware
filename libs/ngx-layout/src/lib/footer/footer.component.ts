@@ -25,11 +25,11 @@ export class FooterComponent {
     {
       type: _('COMMON.RESOURCES'),
       links: [
-        {
-          name: _('COMMON.CONTACT_US'),
-          link: '/contact/us',
-          icon: 'at',
-        },
+        // {
+        //   name: _('COMMON.CONTACT_US'),
+        //   link: '/contact/us',
+        //   icon: 'at',
+        // },
         {
           name: _('COMMON.GITHUB'),
           link: 'https://github.com/Neekware',
@@ -39,30 +39,35 @@ export class FooterComponent {
       ],
     },
     {
-      type: _('COMMON.SOCIAL'),
+      type: _('COMMON.TERMS_CONDITIONS'),
       links: [
+        // {
+        //   name: _('COMMON.TERMS_CONDITIONS'),
+        //   link: 'https://www.youtube.com/channel/UCzUBef-uvcsqLH0fZMQKhRg',
+        //   icon: 'youtube',
+        //   external: true,
+        // },
+        // {
+        //   name: _('SOCIAL.TWITTER'),
+        //   link: 'https://twitter.com/vneekman',
+        //   external: true,
+        //   icon: 'twitter',
+        // },
         {
-          name: _('COMMON.YOUTUBE'),
-          link: 'https://www.youtube.com/channel/UCzUBef-uvcsqLH0fZMQKhRg',
-          icon: 'youtube',
-          external: true,
-        },
-        {
-          name: _('SOCIAL.TWITTER'),
-          link: 'https://twitter.com/vneekman',
-          external: true,
-          icon: 'twitter',
+          name: _('COMMON.TERMS_CONDITIONS'),
+          link: '/terms',
+          icon: 'script-text-outline',
         },
       ],
     },
     {
       type: _('COMMON.COMPANY'),
       links: [
-        {
-          name: _('COMMON.TERMS_CONDITIONS'),
-          link: '/terms',
-          icon: 'script-text-outline',
-        },
+        // {
+        //   name: _('COMMON.TERMS_CONDITIONS'),
+        //   link: '/terms',
+        //   icon: 'script-text-outline',
+        // },
         {
           name: _('COMMON.TERMS_CONDITIONS'),
           link: 'info@neekware.net',
