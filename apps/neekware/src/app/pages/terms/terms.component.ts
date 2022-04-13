@@ -17,10 +17,10 @@ import { I18nService, i18nExtractor as _ } from '@fullerstack/ngx-i18n';
 })
 export class TermsComponent {
   termsList = [
-    {
-      title: _('TERMS.DISCLAIMER.TITLE'),
-      description: _('TERMS.DISCLAIMER.DESCRIPTION'),
-    },
+    // {
+    //   title: _('TERMS.DISCLAIMER.TITLE'),
+    //   description: _('TERMS.DISCLAIMER.DESCRIPTION'),
+    // },
     {
       title: _('TERMS.PRIVACY.TITLE'),
       description: _('TERMS.PRIVACY.DESCRIPTION'),
