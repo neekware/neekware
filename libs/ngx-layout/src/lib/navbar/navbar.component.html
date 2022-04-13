@@ -6,9 +6,7 @@
   <div *ngIf="!authState.isLoggedIn" fxFlex></div>
 
   <div class="branding" (click)="auth.goTo('/')">
-    <!-- <mat-icon class="svg-x1_5" svgIcon="play-circle-outline" color="warn"></mat-icon> -->
-    <img src="./assets/images/logos/logo-micro.png" alt="Logo" />
-    <span class="text">vidcaster</span>
+    <span class="text">Neekware Inc.</span>
   </div>
 
   <div fxFlex></div>
@@ -65,9 +63,9 @@
         {{ navbarLinks.signup.title | translate }}
       </a>
     </div>
-    <a routerLink="/contact/us" mat-menu-item>
-      <mat-icon svgIcon="at"></mat-icon>
-      {{ 'COMMON.CONTACT_US' | translate }}
+    <a routerLink="/about" mat-menu-item>
+      <mat-icon svgIcon="information-outline"></mat-icon>
+      {{ 'COMMON.ABOUT' | translate }}
     </a>
   </mat-menu>
 </mat-toolbar>
