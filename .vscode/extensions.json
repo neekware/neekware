@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "nrwl.angular-console",
+    "angular.ng-template",
+    "streetsidesoftware.code-spell-checker",
+    "ms-azuretools.vscode-docker",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "github.copilot",
+    "graphql.vscode-graphql",
+    "firsttris.vscode-jest-runner",
+    "esbenp.prettier-vscode",
+    "prisma.prisma",
+    "ms-python.python",
+    "juanblanco.solidity",
+    "bradlc.vscode-tailwindcss",
+    "mike-co.import-sorter",
+    "matt-meyers.vscode-dbml"
+  ]
+}

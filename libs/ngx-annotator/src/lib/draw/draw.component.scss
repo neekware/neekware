@@ -1,0 +1,55 @@
+#draw-board {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+
+#draw-canvas {
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  cursor: none;
+  touch-action: none;
+  background-repeat: repeat;
+}
+
+#draw-svg {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.menu {
+  z-index: 3;
+}
+
+.cursor-eraser-white {
+  cursor: url(/assets/images/svg/custom/eraser-white.png) 20 20, move !important;
+}
+
+.cursor-eraser-black {
+  cursor: url(/assets/images/svg/custom/eraser-black.png) 20 20, move !important;
+}
+
+.top-left {
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.top-right {
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.bottom-left {
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}

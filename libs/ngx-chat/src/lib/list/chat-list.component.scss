@@ -1,0 +1,21 @@
+#chat-list,
+#chat-list-fast {
+  padding-right: 0;
+  height: 100%;
+  z-index: 1;
+  padding: 0px;
+}
+
+.chat-item {
+  cursor: pointer;
+}
+
+.chat-highlighted {
+  border: 1px solid #ffb300;
+}
+
+.chat-rabbit .mat-icon {
+  font-size: 100px;
+  height: 100px;
+  width: 100px;
+}

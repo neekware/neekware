@@ -1,0 +1,60 @@
+<div fxLayout="row" fxLayoutAlign="space-around center" [dir]="chatService.state.isLtR ? 'ltr' : 'rtl'">
+  <div fxLayout="row" fxLayoutGap="5px">
+    <button
+      [@wiggleIt]="trashIconState"
+      mat-mini-fab
+      [class.yt-cursor-default]="!chat?.author"
+      matTooltipPosition="before"
+      matTooltip="{{ 'CHAT.CLEAR' | translate }}"
+      color="warn"
+      (click)="clearMessage()"
+    >
+      <mat-icon [class.chat-icon-dim]="!chat?.author" [svgIcon]="!chat?.author ? 'delete-off' : 'delete-outline'"></mat-icon>
+    </button>
+
+    <button mat-mini-fab [color]="chatService?.state?.fireworksEnabled ? 'accent' : 'warn'" (click)="toggleFireworksPlay()">
+      <mat-icon
+        [@wiggleIt]="fireworksIconState"
+        [class.chat-icon-dim]="!chatService?.state?.fireworksEnabled"
+        matTooltipPosition="before"
+        matTooltip="{{
+          (chatService?.state?.fireworksEnabled ? (chatService.isFireworksPlaying ? 'FIREWORKS.STOP' : 'FIREWORKS.START') : '') | translate
+        }}"
+        [svgIcon]="!chatService?.state?.fireworksEnabled || chatService.isFireworksPlaying ? 'firework-off' : 'firework'"
+      ></mat-icon>
+    </button>
+
+    <button mat-mini-fab [color]="chatService?.state?.audioEnabled ? 'accent' : 'warn'" (click)="toggleAudioPlay()">
+      <mat-icon
+        [@wiggleIt]="audioIconState"
+        [class.chat-icon-dim]="!chatService?.state?.audioEnabled"
+        matTooltipPosition="before"
+        matTooltip="{{
+          (chatService?.state?.audioEnabled ? (chatService.isAudioPlaying ? 'CHEERS.STOP' : 'CHEERS.START') : '') | translate
+        }}"
+        [svgIcon]="!chatService?.state?.audioEnabled || chatService.isAudioPlaying ? 'volume-off' : 'volume-high'"
+      ></mat-icon>
+    </button>
+  </div>
+  <div fxFlex></div>
+  <div fxLayout="row" fxLayoutGap="10px">
+    <button mat-mini-fab color="accent" [disabled]="!chatService?.state?.fastForwardMode" (click)="enableAutoScroll()">
+      <mat-icon
+        matTooltipPosition="before"
+        matTooltip="{{ (chatService?.state?.fastForwardMode ? 'CHAT.FF_DISABLE' : '') | translate }}"
+        svgIcon="snail"
+        [@wiggleIt]="snailIconState"
+      ></mat-icon>
+    </button>
+
+    <button mat-mini-fab color="accent" [disabled]="chatService?.state?.fastForwardMode" (click)="enableFastForward()">
+      <mat-icon
+        matTooltipPosition="before"
+        matTooltip="{{ (!chatService?.state?.fastForwardMode ? 'CHAT.FF_ENABLE' : '') | translate }}"
+        svgIcon="rabbit"
+        [@wiggleIt]="rabbitIconState"
+      ></mat-icon>
+    </button>
+  </div>
+</div>
+<audio #audioTag preload="auto" src="./assets/audio/yelling-yay.mp3" class="chat-audio"></audio>
