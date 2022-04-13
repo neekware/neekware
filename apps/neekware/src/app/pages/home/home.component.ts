@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       title: 'Who we are!',
       description:
-        'Neekware has been in the business of dynamic & data-driven web development and services since 2008. We believe that every website & application should be designed for the future but built for today. This way we can keep the upfront cost down while allowing you to grow your business at your own pace. "Design it right!" is the name of the game.',
+        'Neekware has been in the business of dynamic and data-driven web development and services since 2008. We believe that every website and application should be designed for the future but built for today. This way we can keep the upfront cost down while allowing you to grow your business at your own pace. "Design it right!" is the name of the game.',
       image: '/assets/images/misc/neekware-card.png',
     },
     {
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       title: 'What can we do for you?',
       description:
-        "We can help you at all stages, from the concept to the launch of your product & services. Simply tell us your requirements, schedule & budget. We will provide you with a multi-release timeline that maps onto your schedule. This way, you can choose the features you'd like to see, included in each release.",
+        "We can help you at all stages, from the concept to the launch of your product and services. Simply tell us your requirements, schedule and budget. We will provide you with a multi-release timeline that maps onto your schedule. This way, you can choose the features you'd like to see, included in each release.",
       image: '/assets/images/misc/whatwedo-card.png',
     },
     {
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       title: 'How to engage with us',
       description:
-        'Reach out to us via email, phone. Tell us about your needs, and we will get back to you as soon as possible with a statement of work. From there we work with you to finalize the details of your project, followed by a detailed quote. We will then work with you to get the project started. You can count on us on providing you with ongoing consulting services.',
+        'Reach out to us via email or phone. Tell us about your needs, and we will get back to you as soon as possible with a statement of work. From there we work with you to finalize the details of your project, followed by a detailed quote. We will then work with you to get the project started. You can count on us on providing you with ongoing consulting services.',
       image: '/assets/images/misc/process-card.png',
     },
   ];
