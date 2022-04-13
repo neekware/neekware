@@ -11,29 +11,34 @@ import { MenuItem } from '@fullerstack/ngx-menu';
 
 export const layoutMenuTree: MenuItem[] = [
   {
-    name: _('COMMON.ANNOTATE'),
-    icon: 'draw',
-    link: '/annotate/draw',
+    name: _('COMMON.ABOUT'),
+    icon: 'information-outline',
+    link: '/about/us',
   },
   {
-    name: _('CHAT.MANAGER_ADMIN'),
-    icon: 'message-text',
-    children: [
-      {
-        name: _('COMMON.OVERVIEW'),
-        icon: 'magnify-expand',
-        link: '/chat/manager/overview',
-      },
-      {
-        name: _('COMMON.SETUP'),
-        icon: 'cog',
-        link: '/chat/manager/setup',
-      },
-      // { // available via chat overview
-      //   name: _('COMMON.MANAGER_ADMIN'),
-      //   icon: 'fit-to-screen',
-      //   link: '/chat/manager/admin',
-      // },
-    ],
+    name: _('FEATURES.OVERVIEW'),
+    icon: 'cogs',
+    link: '/features/overview',
   },
+  // {
+  //   name: _(''),
+  //   icon: 'message-text',
+  //   children: [
+  //     {
+  //       name: _('COMMON.OVERVIEW'),
+  //       icon: 'magnify-expand',
+  //       link: '/chat/manager/overview',
+  //     },
+  //     {
+  //       name: _('COMMON.SETUP'),
+  //       icon: 'cog',
+  //       link: '/chat/manager/setup',
+  //     },
+  //     // { // available via chat overview
+  //     //   name: _('COMMON.MANAGER_ADMIN'),
+  //     //   icon: 'fit-to-screen',
+  //     //   link: '/chat/manager/admin',
+  //     // },
+  //   ],
+  // },
 ];

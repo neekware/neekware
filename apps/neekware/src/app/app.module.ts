@@ -32,9 +32,11 @@ import { AppComponent } from './app.component';
 import { httpInterceptorProvidersOrderedList } from './app.intercept';
 import { AppRoutes } from './app.routing';
 import { AboutComponent } from './pages/about/about.component';
+import { ClientsOverviewComponent } from './pages/clients/clients.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { EmailChangePerformComponent } from './pages/email-change-perform/email-change-perform.component';
 import { EmailChangeRequestComponent } from './pages/email-change-request/email-change-request.component';
+import { FeaturesOverviewComponent } from './pages/features/features.features.';
 import { HomeComponent } from './pages/home/home.component';
 import { LanguageChangeComponent } from './pages/language-change/language-change.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -65,6 +67,8 @@ import { UserVerifyComponent } from './pages/user-verify/user-verify.component';
     ContactUsComponent,
     UserVerifyComponent,
     TermsComponent,
+    ClientsOverviewComponent,
+    FeaturesOverviewComponent,
   ],
   imports: [
     BrowserModule,

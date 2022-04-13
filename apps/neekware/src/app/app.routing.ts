@@ -12,9 +12,11 @@ import { i18nExtractor as _ } from '@fullerstack/ngx-i18n';
 import { DeactivateGuard } from '@fullerstack/ngx-shared';
 
 import { AboutComponent } from './pages/about/about.component';
+import { ClientsOverviewComponent } from './pages/clients/clients.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { EmailChangePerformComponent } from './pages/email-change-perform/email-change-perform.component';
 import { EmailChangeRequestComponent } from './pages/email-change-request/email-change-request.component';
+import { FeaturesOverviewComponent } from './pages/features/features.features.';
 import { HomeComponent } from './pages/home/home.component';
 import { LanguageChangeComponent } from './pages/language-change/language-change.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -155,6 +157,22 @@ export const AppRoutes: Routes = [
     data: {
       title: _('COMMON.CONTACT_US'),
       description: _('COMMON.CONTACT_US'),
+    },
+  },
+  {
+    path: 'features/overview',
+    component: FeaturesOverviewComponent,
+    data: {
+      title: _('FEATURES.OVERVIEW'),
+      description: _('FEATURES.OVERVIEW_DESC'),
+    },
+  },
+  {
+    path: 'clients/overview',
+    component: ClientsOverviewComponent,
+    data: {
+      title: _('CLIENTS.OVERVIEW'),
+      description: _('CLIENTS.OVERVIEW_DESC'),
     },
   },
   {

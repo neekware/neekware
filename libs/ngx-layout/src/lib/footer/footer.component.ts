@@ -25,11 +25,12 @@ export class FooterComponent {
     {
       type: _('COMMON.RESOURCES'),
       links: [
-        // {
-        //   name: _('COMMON.CONTACT_US'),
-        //   link: '/contact/us',
-        //   icon: 'at',
-        // },
+        {
+          name: _('COMMON.OVERVIEW'),
+          link: '/features/overview',
+          icon: 'feature-search-outline',
+          external: true,
+        },
         {
           name: _('COMMON.GITHUB'),
           link: 'https://github.com/Neekware',
@@ -39,40 +40,33 @@ export class FooterComponent {
       ],
     },
     {
-      type: _('COMMON.TERMS_CONDITIONS'),
+      type: _('COMMON.US_CLIENTS'),
       links: [
-        // {
-        //   name: _('COMMON.TERMS_CONDITIONS'),
-        //   link: 'https://www.youtube.com/channel/UCzUBef-uvcsqLH0fZMQKhRg',
-        //   icon: 'youtube',
-        //   external: true,
-        // },
-        // {
-        //   name: _('SOCIAL.TWITTER'),
-        //   link: 'https://twitter.com/vneekman',
-        //   external: true,
-        //   icon: 'twitter',
-        // },
         {
-          name: _('COMMON.TERMS_CONDITIONS'),
-          link: '/terms',
-          icon: 'script-text-outline',
+          name: _('COMMON.OUR_CLIENTS'),
+          link: '/clients/overview',
+          icon: 'domain',
+        },
+        {
+          name: _('COMMON.CONTACT_US'),
+          link: 'info@neekware.net',
+          icon: 'email',
+          email: true,
         },
       ],
     },
     {
       type: _('COMMON.COMPANY'),
       links: [
-        // {
-        //   name: _('COMMON.TERMS_CONDITIONS'),
-        //   link: '/terms',
-        //   icon: 'script-text-outline',
-        // },
         {
           name: _('COMMON.TERMS_CONDITIONS'),
-          link: 'info@neekware.net',
-          icon: 'email',
-          email: true,
+          link: '/terms',
+          icon: 'script-text-outline',
+        },
+        {
+          name: _('APP.ABOUT'),
+          link: '/about/us',
+          icon: 'information-outline',
         },
       ],
     },

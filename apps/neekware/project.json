@@ -52,6 +52,11 @@
             "glob": "**/*.md",
             "input": "libs/ngx-chat/src/lib/doc",
             "output": "assets/md"
+          },
+          {
+            "glob": "**/*.md",
+            "input": "apps/neekware/src/app/pages/features",
+            "output": "assets/md"
           }
         ],
         "styles": [

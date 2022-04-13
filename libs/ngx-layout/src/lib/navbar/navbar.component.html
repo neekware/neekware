@@ -1,5 +1,5 @@
 <mat-toolbar class="main-navbar" color="primary">
-  <button (click)="layout.toggleMenu()" mat-icon-button aria-label="Toggle sidenav">
+  <button (click)="layout.toggleMenu()" mat-icon-button aria-label="Toggle sidenav" *ngIf="false">
     <mat-icon [@rotate90]="menuIconState" [svgIcon]="layoutState.menuOpen ? 'close' : 'menu'"></mat-icon>
   </button>
 
@@ -19,6 +19,7 @@
     class="ml-xs overflow-visible"
   >
     <mat-icon
+      *ngIf
       [@wiggleIt]="notifyIconState"
       aria-label="notification icon"
       [svgIcon]="layoutState.notifyOpen ? 'bell' : 'bell-ring'"
@@ -26,7 +27,7 @@
     <span [class.fs-bell-label]="true"></span>
   </button>
 
-  <button [matMenuTriggerFor]="accountMenu" mat-icon-button>
+  <button [matMenuTriggerFor]="accountMenu" mat-icon-button *ngIf="false">
     <mat-icon svgIcon="account" *ngIf="authState.isLoggedIn"></mat-icon>
     <mat-icon svgIcon="dots-vertical" *ngIf="!authState.isLoggedIn"></mat-icon>
   </button>
