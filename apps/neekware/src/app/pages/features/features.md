@@ -9,7 +9,7 @@ Elegance in simplicity
 ```
 
 <p align="center">
-<img style="margin: 0 auto; width:100%;" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/login.png">
+<img style="margin: 0 auto; width:90%;" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/login.png">
 </p>
 
 <br/><br/>
@@ -21,7 +21,7 @@ Validate data on the client-side
 ```
 
 <p align="center">
-<img style="margin: 0 auto; width:100%;" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/signup.png">
+<img style="margin: 0 auto; width:90%;" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/signup.png">
 </p>
 
 <br/><br/>
@@ -33,7 +33,7 @@ Light, Dark and Custom
 ```
 
 <p align="center">
-<img style="margin: 0 auto; width:100%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/dark-theme.png">
+<img style="margin: 0 auto; width:90%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/dark-theme.png">
 </p>
 
 <br/><br/>
@@ -45,7 +45,7 @@ i18n, i10n support
 ```
 
 <p align="center">
-<img style="margin: 0 auto; width:100%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/lang.png">
+<img style="margin: 0 auto; width:90%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/lang.png">
 </p>
 
 <br/><br/>
@@ -57,7 +57,7 @@ Right to left (LTR) support
 ```
 
 <p align="center">
-<img style="margin: 0 auto; width:100%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/lang-rtl.png">
+<img style="margin: 0 auto; width:90%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/lang-rtl.png">
 </p>
 
 <br/><br/>
@@ -69,7 +69,7 @@ Alert and Notification
 ```
 
 <p align="center">
-<img style="margin: 0 auto; width:100%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/notify.png">
+<img style="margin: 0 auto; width:90%;"" src="https://raw.githubusercontent.com/neekware/fullerstack/main/libs/agx-assets/src/lib/images/misc/notify.png">
 </p>
 
 <br/><br/>
