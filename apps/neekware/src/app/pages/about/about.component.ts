@@ -25,7 +25,7 @@ export class AboutComponent {
     {
       title: 'Cathy H. Liu',
       description:
-        'Cathy is responsible for managing the accounts and billing of our clients. She has over 10 years of experience in the industry. She holds a bachelor of computer engineering from Beijing University. She lives in Ontario, Canada.',
+        'Cathy is responsible for managing the accounts and billing of our clients. She has over 15 years of experience in the industry. She holds a bachelor of computer engineering from Beijing University of Technology. She lives in Ontario, Canada.',
       image: '/assets/images/people/account-manager-card.png',
     },
   ];
