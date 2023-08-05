@@ -25,32 +25,27 @@ export class HomeComponent implements OnInit, OnDestroy {
   pitchList = [
     {
       title: 'Who we are!',
-      description:
-        'Neekware has been in the business of dynamic and data-driven web development and services since 2008. We believe that every website and application should be designed for the future but built for today. This way we can keep the upfront cost down while allowing you to grow your business at your own pace. "Design it right!" is the name of the game.',
+      description: `Neekware has been specializing in enterprise application architecture, design, and development since 2008. We believe that every website and application should be designed for the future but built for today. This approach allows us to keep upfront costs low while enabling you to grow your business at your own pace. "Design it right!" is our guiding principle.`,
       image: '/assets/images/misc/neekware-card.png',
     },
     {
-      title: 'Single code-base, multiple platforms',
-      description:
-        'We build for all platforms, including web, mobile, desktop, and IoT.  Deployment will be easy, as we have a robust set of tools to help you get started. We hold a strong focus on security, performance, and scalability. We are always looking for new ways to improve our tools and ultimately your products.',
+      title: 'Single Code-Base Across Multiple Platforms',
+      description: `We build applications for all platforms, including web, mobile, desktop, and IoT. With our robust set of tools, deployment is made easy. Our key focuses are on security, performance, and scalability. We're consistently seeking new ways to enhance our tools and, ultimately, your products.`,
       image: '/assets/images/misc/platforms-card.png',
     },
     {
-      title: 'What can we do for you?',
-      description:
-        "We can help you at all stages, from the concept to the launch of your product and services. Simply tell us your requirements, schedule and budget. We will provide you with a multi-release timeline that maps onto your schedule. This way, you can choose the features you'd like to see, included in each release.",
+      title: 'What Can We Do For You?',
+      description: `We can assist you at every stage, from conceptualizing to launching your product or service. Just inform us about your requirements, schedule, and budget. In return, we'll provide you with a multi-release timeline aligned with your schedule. This approach allows you to choose the features you'd like included in each release.`,
       image: '/assets/images/misc/whatwedo-card.png',
     },
     {
-      title: 'Our technology stack',
-      description:
-        "We use the latest technologies to build the best products for you. Our stack is built with mono-repositories, so you can develop and deploy multiple applications easily. Our first language is Typescript, throughout our stack, the frontend, backend, and anything in between. Our second language is Python, along with Django framework. GraphQL is our backend's primary endpoint, while we fully support REST API.  We can build teams for you, train the staff, and provide ongoing consulting services. We use a variety of tools to help you manage your code, including Git, Jira, Slack, and Bitbucket.",
+      title: 'Our Technology Stack',
+      description: `We utilize the latest technologies to build superior products for you. Our tech stack comprises mono-repositories, facilitating the development and deployment of multiple applications with ease. Our primary languages are TypeScript and Python, supported by a range of technologies including Angular, React, Next.Js, GraphQL, REST, Git, Jira, and Slack. These are used across our stack, from the frontend to the backend, and everything in between. Alongside creating the ideal tech infrastructure, we can assemble dedicated teams for you, provide staff training, and offer ongoing consulting services to ensure your technological efficiency and growth.`,
       image: '/assets/images/misc/techstack-card.png',
     },
     {
-      title: 'How to engage with us',
-      description:
-        'Reach out to us via email or phone. Tell us about your needs, and we will get back to you as soon as possible with a statement of work. From there we work with you to finalize the details of your project, followed by a detailed quote. We will then work with you to get the project started. You can count on us on providing you with ongoing consulting services.',
+      title: 'How to Engage with Us',
+      description: `Contact us via email or phone, and share your requirements. We'll promptly respond with a statement of work. Following that, we'll collaborate with you to finalize the project details and provide a comprehensive quote. Once agreed upon, we'll kickstart your project and ensure you can rely on our ongoing consulting services.`,
       image: '/assets/images/misc/process-card.png',
     },
   ];
