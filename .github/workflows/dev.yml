@@ -44,9 +44,6 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Install packages
-        run: yarn install
-
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
@@ -54,6 +51,9 @@ jobs:
       - name: Get branch name
         id: branch
         run: echo ::set-output name=current_branch::${GITHUB_REF#refs/*/}
+
+      - name: Install packages
+        run: yarn install
 
       - name: Prisma generate
         run: yarn prisma:generate
