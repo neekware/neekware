@@ -18,14 +18,17 @@ export class AboutComponent {
   peopleList = [
     {
       title: 'Val Neekman',
-      description:
-        'Val is responsible for defining the overall business strategy for the firm, including time allocated to sales and operations. Val brings more than 20 years of experience to the firm. He previously served as founder of Neekware Inc, which he pivoted to a software consultancy firm in 2008. Val holds a bachelor of engineering from Carleton University. Val lives in Ontario, Canada.',
+      description: `As President and Principal Architect of Neekware Inc., Val is in charge of charting the firm's strategic course, carefully balancing his time between sales endeavors and operational oversight. With an extensive career spanning over two decades, Val's seasoned expertise guides the company's vision and direction.
+
+
+        <br/><br/>A proud alumnus of Carleton University, Val holds a Bachelor's degree in Engineering. His educational background, coupled with his vast professional experience, forms the foundation of his pragmatic and innovative approach to business.
+
+        <br/><br/>Operating in Waterloo, Ontario, Canada, Val continues to lead Neekware Inc. on its path to success, constantly seeking new ways to drive growth and deliver exceptional service to clients.`,
       image: '/assets/images/people/ceo-card.png',
     },
     {
       title: 'Cathy H. Liu',
-      description:
-        'Cathy is responsible for managing the accounts and billing of our clients. She has over 15 years of experience in the industry. She holds a bachelor of computer engineering from Beijing University of Technology. She lives in Ontario, Canada.',
+      description: `As the Account Manager at Neekware Inc., Cathy oversees client accounts and billing, drawing from over 15 years of industry experience. <br/><br/>She is a Computer Engineering graduate from the Beijing University of Technology and operates from Ontario, Canada.`,
       image: '/assets/images/people/account-manager-card.png',
     },
   ];

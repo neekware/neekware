@@ -20,7 +20,7 @@
     >
       <div fxFlex="calc(50% - 8px)" fxFlex.xs="calc(33% - 8px)" class="person" [fxFlexOrder.gt-xs]="even ? '1' : '2'" ngClass.xm="small">
         <h3 class="title">{{ person.title | translate }}</h3>
-        <p class="description">{{ person.description | translate }}</p>
+        <p class="description" [innerHTML]="person.description">.</p>
       </div>
       <div
         fxFlex="calc(50% - 8px)"
