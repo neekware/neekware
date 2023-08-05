@@ -232,5 +232,8 @@
     "typescript": "4.6.3",
     "uglify-js": "3.14.3",
     "webpack-bundle-analyzer": "4.4.0"
+  },
+  "engines": {
+    "node": "16.18"
   }
 }
