@@ -27,25 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Contact form handler
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple form validation
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            if (name && email && message) {
-                // Show success message
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            }
-        });
-    }
 
     // Add parallax effect to hero section
     window.addEventListener('scroll', function() {
