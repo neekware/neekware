@@ -174,6 +174,11 @@
             scroll-behavior: smooth;
         }
         
+        /* Make black SVG icons gray in dark mode */
+        .dark .icon-gray-dark {
+            filter: invert(1) opacity(0.7);
+        }
+        
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -318,7 +323,7 @@
                             Since 2008, Neekware has specialized in architecting, designing, and developing enterprise-grade applications. 
                             We design for the future but build for today, enabling scalable growth without inflating upfront costs.
                         </p>
-                        <p class="text-blue-600 dark:text-blue-400 font-semibold mt-4">Our philosophy is simple: Design it right.</p>
+                        <p class="text-blue-600 dark:text-gray-300 font-semibold mt-4">Our philosophy is simple: Design it right.</p>
                     </div>
                     
                     <!-- AI-Native Platform-Flexible -->
@@ -336,8 +341,8 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Service 1 -->
                     <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
-                            <img src="images/svg/code-icon.svg" alt="Code" class="w-8 h-8">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mb-6">
+                            <img src="images/svg/code-icon.svg" alt="Code" class="w-8 h-8 icon-gray-dark">
                         </div>
                         <h3 class="text-2xl font-semibold mb-4">Enterprise Development</h3>
                         <p class="text-gray-600 dark:text-gray-400">Full-stack development using modern frameworks, cloud-native tooling, and AI-enablement where it drives impact. Built with enterprise-grade security, scalability, and performance at the core.</p>
@@ -345,8 +350,8 @@
                     
                     <!-- Service 2 -->
                     <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
-                            <img src="images/svg/cpu-icon.svg" alt="CPU" class="w-8 h-8">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mb-6">
+                            <img src="images/svg/cpu-icon.svg" alt="CPU" class="w-8 h-8 icon-gray-dark">
                         </div>
                         <h3 class="text-2xl font-semibold mb-4">Architecture & Design</h3>
                         <p class="text-gray-600 dark:text-gray-400">Future-proof system architecture with a focus on modularity, data flow, and AI integration. Paired with intuitive, user-centric UI/UX design for seamless user experiences across platforms.</p>
@@ -354,8 +359,8 @@
                     
                     <!-- Service 3 -->
                     <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
-                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
-                            <img src="images/svg/shield-check-icon.svg" alt="Shield Check" class="w-8 h-8">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mb-6">
+                            <img src="images/svg/shield-check-icon.svg" alt="Shield Check" class="w-8 h-8 icon-gray-dark">
                         </div>
                         <h3 class="text-2xl font-semibold mb-4">Consulting & Support</h3>
                         <p class="text-gray-600 dark:text-gray-400">Strategic consulting to align tech decisions with business goals. From AI readiness assessments to system audits, we provide expert guidance and ongoing support to ensure long-term efficiency and scalable growth.</p>
@@ -637,8 +642,8 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Clean Design -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/design-icon.svg" alt="Design" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/design-icon.svg" alt="Design" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Clean & Elegant Design</h3>
                         <p class="text-gray-600 dark:text-gray-400">Elegance in simplicity with modern UI/UX principles</p>
@@ -646,8 +651,8 @@
                     
                     <!-- Error Detection -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/check-circle-icon.svg" alt="Check Circle" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/check-circle-icon.svg" alt="Check Circle" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Intelligent Error Detection</h3>
                         <p class="text-gray-600 dark:text-gray-400">Client-side validation and error handling</p>
@@ -655,8 +660,8 @@
                     
                     <!-- Theme Support -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/theme-icon.svg" alt="Theme" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/theme-icon.svg" alt="Theme" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Multiple Theme Support</h3>
                         <p class="text-gray-600 dark:text-gray-400">Light, Dark, and Custom themes</p>
@@ -664,8 +669,8 @@
                     
                     <!-- i18n Support -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/language-icon.svg" alt="Language" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/language-icon.svg" alt="Language" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Multi-Language Support</h3>
                         <p class="text-gray-600 dark:text-gray-400">i18n and l10n with RTL language support</p>
@@ -673,8 +678,8 @@
                     
                     <!-- Notifications -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/bell-icon.svg" alt="Notifications" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/bell-icon.svg" alt="Notifications" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Alert & Notifications</h3>
                         <p class="text-gray-600 dark:text-gray-400">Built-in notification system for user feedback</p>
@@ -682,8 +687,8 @@
                     
                     <!-- Security -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/lock-icon.svg" alt="Security" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lock-icon.svg" alt="Security" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Enterprise Security</h3>
                         <p class="text-gray-600 dark:text-gray-400">Built-in security features and best practices</p>
@@ -691,8 +696,8 @@
                     
                     <!-- AI Enabled -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/lightbulb-icon.svg" alt="AI" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lightbulb-icon.svg" alt="AI" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">AI-Enabled Applications</h3>
                         <p class="text-gray-600 dark:text-gray-400">Seamless AI integration with privacy-first architecture</p>
@@ -700,8 +705,8 @@
                     
                     <!-- Data Privacy -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/shield-icon.svg" alt="Privacy" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/shield-icon.svg" alt="Privacy" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Data Privacy Protection</h3>
                         <p class="text-gray-600 dark:text-gray-400">Your data stays secure with on-premise deployment options</p>
@@ -709,8 +714,8 @@
                     
                     <!-- Performance & Quality Experience -->
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/lightning-icon.svg" alt="Performance" class="w-10 h-10">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lightning-icon.svg" alt="Performance" class="w-10 h-10 icon-gray-dark">
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Performance & Quality Experience</h3>
                         <p class="text-gray-600 dark:text-gray-400">End-to-end optimization for speed, scale, and seamless user journey</p>
@@ -729,22 +734,22 @@
                 
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-700 text-gray-900 dark:text-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
                         <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
                         <p class="text-gray-600 dark:text-gray-400">Reach out via email or phone and share your requirements</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-700 text-gray-900 dark:text-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
                         <h3 class="text-lg font-semibold mb-2">Statement of Work</h3>
                         <p class="text-gray-600 dark:text-gray-400">We'll promptly respond with a detailed statement of work</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-700 text-gray-900 dark:text-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
                         <h3 class="text-lg font-semibold mb-2">Finalize Details</h3>
                         <p class="text-gray-600 dark:text-gray-400">Collaborate to finalize project details and comprehensive quote</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-gray-700 text-gray-900 dark:text-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
                         <h3 class="text-lg font-semibold mb-2">Kickstart Project</h3>
                         <p class="text-gray-600 dark:text-gray-400">Begin development with ongoing consulting support</p>
                     </div>
@@ -841,8 +846,8 @@
         </section>
         
         <!-- Terms & Conditions and Privacy Section -->
-        <section class="py-16 bg-gray-100 dark:bg-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="legal-section" x-data="{ showContent: false }" @toggle-legal.window="showContent = !showContent" class="bg-gray-100 dark:bg-gray-900 overflow-hidden transition-all duration-700 ease-in-out" :class="showContent ? 'py-16 border-t border-gray-300 dark:border-gray-700' : 'py-0'">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" x-show="showContent" x-transition:enter="transition ease-out duration-700" x-transition:enter-start="opacity-0 transform translate-y-8" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-8">
                 <div class="grid md:grid-cols-2 gap-12">
                     <!-- Privacy -->
                     <div>
@@ -875,41 +880,38 @@
                         <span class="ml-2 font-semibold">Neekware</span>
                     </div>
                     <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                        <a href="#privacy" class="hover:text-white transition-colors" @click="window.scrollTo({ top: document.querySelector('.py-16').offsetTop, behavior: 'smooth' })">Privacy</a>
-                        <a href="#terms" class="hover:text-white transition-colors" @click="window.scrollTo({ top: document.querySelector('.py-16').offsetTop, behavior: 'smooth' })">Terms & Conditions</a>
+                        <button @click="$dispatch('toggle-legal'); setTimeout(() => { const el = document.getElementById('legal-section'); if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100)" class="hover:text-white transition-colors">Privacy</button>
+                        <button @click="$dispatch('toggle-legal'); setTimeout(() => { const el = document.getElementById('legal-section'); if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100)" class="hover:text-white transition-colors">Terms & Conditions</button>
                         <p>&copy; 2006-<span id="currentYear"></span> Neekware Inc. All rights reserved.</p>
                     </div>
                 </div>
                 
                 <!-- Social Sharing Section -->
                 <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-                    <p class="mb-4 text-sm">Share Neekware Inc.</p>
+                    <p class="mb-4 text-sm">Share <img src="images/svg/share-icon.svg" alt="Share" class="w-4 h-4 inline-block mx-1 opacity-60 invert"> Neekware Inc.</p>
                     <div class="flex justify-center gap-4">
                         <!-- LinkedIn Share Button -->
                         <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neekware.com" 
                            target="_blank" 
                            rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-lg transition-colors">
-                            <img src="images/svg/linkedin-icon.svg" alt="LinkedIn" class="w-5 h-5 mr-2">
-                            Share on LinkedIn
+                           class="inline-flex items-center p-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+                            <img src="images/svg/linkedin-icon.svg" alt="LinkedIn" class="w-5 h-5 invert">
                         </a>
                         
                         <!-- X.com (Twitter) Share Button -->
                         <a href="https://twitter.com/intent/tweet?url=https://neekware.com&text=Check%20out%20Neekware%20Inc.%20-%20Enterprise%20Application%20Development%20with%20AI-Enabled%20Solutions" 
                            target="_blank" 
                            rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
-                            <img src="images/svg/x-icon.svg" alt="X" class="w-5 h-5 mr-2">
-                            Share on X
+                           class="inline-flex items-center p-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+                            <img src="images/svg/x-icon.svg" alt="X" class="w-5 h-5 invert">
                         </a>
                         
                         <!-- Facebook Share Button -->
                         <a href="https://www.facebook.com/sharer/sharer.php?u=https://neekware.com" 
                            target="_blank" 
                            rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">
-                            <img src="images/svg/facebook-icon.svg" alt="Facebook" class="w-5 h-5 mr-2">
-                            Share on Facebook
+                           class="inline-flex items-center p-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors">
+                            <img src="images/svg/facebook-icon.svg" alt="Facebook" class="w-5 h-5 invert">
                         </a>
                     </div>
                 </div>
