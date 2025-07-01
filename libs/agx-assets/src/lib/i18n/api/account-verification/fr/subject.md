@@ -1,1 +1,0 @@
-{{RegexCompanyName}} | Vérification de compte!

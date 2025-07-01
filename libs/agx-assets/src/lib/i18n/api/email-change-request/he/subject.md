@@ -1,1 +1,0 @@
-{{RegexCompanyName}} | שינוי בדוא"ל!

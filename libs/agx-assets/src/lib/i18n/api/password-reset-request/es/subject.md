@@ -1,1 +1,0 @@
-{{RegexCompanyName}} | ¡Restablecimiento de contraseña!

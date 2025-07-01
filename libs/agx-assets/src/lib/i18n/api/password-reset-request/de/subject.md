@@ -1,1 +1,0 @@
-{{RegexCompanyName}} | Passwort zurücksetzen!

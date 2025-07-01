@@ -1,5 +1,0 @@
-{
-  "<--browser sync: lite server config -->": "comment",
-  "port": 8000,
-  "cors": true
-}

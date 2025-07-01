@@ -1,1 +1,0 @@
-[ {{RegexCompanyName}} ] Herzlich willkommen!
