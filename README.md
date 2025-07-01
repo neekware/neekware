@@ -1,3 +1,3 @@
-Neekware Inc. Official Website. 
+Official Website for Neekware Inc. 
 
 https://neekware.com
