@@ -235,7 +235,7 @@
                         <button @click="darkMode = !darkMode" 
                                 class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                             <img x-show="!darkMode" src="images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
-                            <img x-show="darkMode" src="images/svg/moon-icon.svg" alt="Dark mode" class="w-5 h-5">
+                            <img x-show="darkMode" src="images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
                         </button>
                     </div>
                     
@@ -244,10 +244,11 @@
                         <button @click="darkMode = !darkMode" 
                                 class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-2">
                             <img x-show="!darkMode" src="images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
-                            <img x-show="darkMode" src="images/svg/moon-icon.svg" alt="Dark mode" class="w-5 h-5">
+                            <img x-show="darkMode" src="images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
                         </button>
                         <button @click="mobileMenu = !mobileMenu" class="p-2">
-                            <img src="images/svg/menu-icon.svg" alt="Menu" class="w-6 h-6">
+                            <img x-show="!darkMode" src="images/svg/menu-icon.svg" alt="Menu" class="w-6 h-6">
+                            <img x-show="darkMode" src="images/svg/menu-icon-light.svg" alt="Menu" class="w-6 h-6">
                         </button>
                     </div>
                 </div>
@@ -284,7 +285,7 @@
                         Neekware Inc.
                     </h1>
                     <h2 class="text-xl md:text-2xl font-semibold mb-2 text-gray-700 dark:text-gray-300">
-                        Enterprise Application
+                        AI-Enabled Enterprise Application
                     </h2>
                     <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">
                         Architecture • Design • Development
@@ -540,17 +541,17 @@
                     <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-8">
                         <div class="text-center mb-6">
                             <img src="images/val-neekman.jpeg" alt="Val Neekman" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-lg">
-                            <h3 class="text-2xl font-bold mb-1">Val Neekman</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-semibold">Founder & Principal Consultant</p>
+                            <h3 class="text-2xl font-bold mb-1"><img src="images/svg/t.m.1.svg" alt="Team member" class="h-7 inline-block dark:invert"></h3>
+                            <p class="text-blue-600 dark:text-gray-300 font-semibold">Founder & Principal Consultant</p>
                         </div>
                         <div class="text-gray-600 dark:text-gray-400 space-y-3">
                             <p>
-                                Val Neekman leads Neekware Inc. with over 20 years of experience delivering scalable, AI-enabled 
+                                Our founder leads Neekware Inc. with over 20 years of experience delivering scalable, AI-enabled 
                                 enterprise applications. He specializes in complex software initiatives, whether building new systems 
                                 or revitalizing projects needing strong technical and product leadership.
                             </p>
                             <p>
-                                Val combines deep product expertise with hands-on technical skills to design cloud-native and on-premise 
+                                He combines deep product expertise with hands-on technical skills to design cloud-native and on-premise 
                                 solutions focused on AI integration and clean architecture. Based in Waterloo, Ontario, he partners closely 
                                 with clients to align business goals with software delivery, ensuring projects move fast, scale efficiently, 
                                 and deliver measurable results.
@@ -562,12 +563,12 @@
                     <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-8">
                         <div class="text-center mb-6">
                             <img src="images/cathy-liu.png" alt="Cathy H. Liu" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-lg">
-                            <h3 class="text-2xl font-bold mb-1">Cathy H. Liu</h3>
-                            <p class="text-blue-600 dark:text-blue-400 font-semibold">Account Manager</p>
+                            <h3 class="text-2xl font-bold mb-1"><img src="images/svg/t.m.2.svg" alt="Team member" class="h-7 inline-block dark:invert"></h3>
+                            <p class="text-blue-600 dark:text-gray-300 font-semibold">Account Manager</p>
                         </div>
                         <div class="text-gray-600 dark:text-gray-400 space-y-3">
                             <p>
-                                Cathy H. Liu manages client accounts and billing at Neekware Inc., bringing over 15 years of experience 
+                                Our account manager handles client accounts and billing at Neekware Inc., bringing over 15 years of experience 
                                 in client communication and project coordination. She ensures seamless updates and acts as the primary 
                                 liaison between clients and delivery teams, keeping projects on track and stakeholders informed.
                             </p>
