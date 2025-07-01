@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neekware Inc. - Enterprise Application Development | AI-Enabled Solutions</title>
+    <meta name="description" content="Neekware Inc. specializes in enterprise application architecture, design, and development. AI-enabled solutions, cloud-native architectures, and scalable systems since 2008.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Neekware Inc. - Enterprise Application Development | AI-Enabled Solutions">
+    <meta property="og:description" content="Expert enterprise application development with AI integration. Cloud-native and on-premise solutions focused on security, performance, and scalability.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neekware.com/">
+    <meta property="og:image" content="https://neekware.com/images/logo-large.png">
+    <meta property="og:site_name" content="Neekware Inc.">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Neekware Inc. - Enterprise Application Development">
+    <meta name="twitter:description" content="Expert enterprise application development with AI integration. Cloud-native and on-premise solutions focused on security, performance, and scalability.">
+    <meta name="twitter:image" content="https://neekware.com/images/logo-large.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="enterprise application development, AI solutions, cloud-native, microservices, Angular, React, TypeScript, Python, software architecture">
+    <meta name="author" content="Neekware Inc.">
+    <link rel="canonical" href="https://neekware.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom styles -->
+    <style>
+        /* Custom animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0f172a, #1e3a8a, #1e40af, #312e81);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        /* Dancing gradient balls */
+        @keyframes dance1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(100px, -50px) scale(1.1); }
+            50% { transform: translate(-50px, -100px) scale(0.9); }
+            75% { transform: translate(-100px, 50px) scale(1.05); }
+        }
+        
+        @keyframes dance2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(-80px, 60px) scale(0.95); }
+            50% { transform: translate(120px, -30px) scale(1.1); }
+            75% { transform: translate(60px, 80px) scale(1); }
+        }
+        
+        @keyframes dance3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(70px, 70px) scale(1.05); }
+            50% { transform: translate(-100px, 40px) scale(0.95); }
+            75% { transform: translate(-30px, -80px) scale(1.1); }
+        }
+        
+        .gradient-ball {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.7;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        
+        .ball-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            animation: dance1 20s infinite;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .ball-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            animation: dance2 18s infinite;
+            bottom: 20%;
+            right: 15%;
+        }
+        
+        .ball-3 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            animation: dance3 22s infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Dark mode gradient balls */
+        .dark .ball-1 {
+            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+            opacity: 0.5;
+        }
+        
+        .dark .ball-2 {
+            background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+            opacity: 0.5;
+        }
+        
+        .dark .ball-3 {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+            opacity: 0.5;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Dark mode glass */
+        .dark .glass {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+            background: #666;
+        }
+    </style>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body x-data="{ darkMode: false, mobileMenu: false }" 
+      x-init="darkMode = localStorage.getItem('darkMode') === 'true'; $watch('darkMode', value => localStorage.setItem('darkMode', value))" 
+      :class="darkMode ? 'dark' : ''" class="transition-colors duration-300">
+    
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        
+        <!-- Navigation -->
+        <nav class="fixed w-full top-0 z-50 glass transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center">
+                        <img x-show="!darkMode" src="images/svg/neekware-light.svg" alt="Neekware" class="h-8 w-auto">
+                        <img x-show="darkMode" src="images/svg/neekware-dark.svg" alt="Neekware" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold">Neekware</span>
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                        <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Services</a>
+                        <a href="#tech" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tech Stack</a>
+                        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                        <a href="#clients" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Clients</a>
+                        <a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Features</a>
+                        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                        
+                        <!-- Theme Toggle -->
+                        <button @click="darkMode = !darkMode" 
+                                class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                            <img x-show="!darkMode" src="images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                            <img x-show="darkMode" src="images/svg/moon-icon.svg" alt="Dark mode" class="w-5 h-5">
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button @click="darkMode = !darkMode" 
+                                class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-2">
+                            <img x-show="!darkMode" src="images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                            <img x-show="darkMode" src="images/svg/moon-icon.svg" alt="Dark mode" class="w-5 h-5">
+                        </button>
+                        <button @click="mobileMenu = !mobileMenu" class="p-2">
+                            <img src="images/svg/menu-icon.svg" alt="Menu" class="w-6 h-6">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-show="mobileMenu" x-transition class="md:hidden glass">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Home</a>
+                    <a href="#services" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Services</a>
+                    <a href="#tech" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Tech Stack</a>
+                    <a href="#about" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">About</a>
+                    <a href="#clients" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Clients</a>
+                    <a href="#features" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Features</a>
+                    <a href="#contact" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Contact</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[50vh] py-8 pt-20 mt-[5px] mb-[5px] flex items-center justify-center relative overflow-hidden bg-white dark:bg-gray-900">
+            <!-- Dancing gradient balls -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="gradient-ball ball-1"></div>
+                <div class="gradient-ball ball-2"></div>
+                <div class="gradient-ball ball-3"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <img x-show="!darkMode" src="images/svg/neekware-light.svg" alt="Neekware Logo" class="h-40 md:h-56 w-auto mx-auto mb-3 float-animation">
+                    <img x-show="darkMode" src="images/svg/neekware-dark.svg" alt="Neekware Logo" class="h-40 md:h-56 w-auto mx-auto mb-3 float-animation">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-3 text-gray-900 dark:text-white">
+                        Neekware Inc.
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                        Enterprise Application
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">
+                        Architecture • Design • Development
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#services" class="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors inline-block font-semibold">
+                            Explore Our Services
+                        </a>
+                        <a href="#contact" class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">What We Do</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">Whether leading full project delivery or integrating within your team, we scale to match your workflow, AI-enabled and enterprise-ready</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- Who We Are -->
+                    <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold mb-4">Who We Are</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Since 2008, Neekware has specialized in architecting, designing, and developing enterprise-grade applications. 
+                            We design for the future but build for today, enabling scalable growth without inflating upfront costs.
+                        </p>
+                        <p class="text-blue-600 dark:text-blue-400 font-semibold mt-4">Our philosophy is simple: Design it right.</p>
+                    </div>
+                    
+                    <!-- AI-Native Platform-Flexible -->
+                    <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-semibold mb-4">AI-Native, Platform-Flexible Applications</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            We build intelligent applications across web, mobile, desktop, and IoT, optimized for each platform, 
+                            yet unified by shared architecture, APIs, and AI-driven services. Our development approach prioritizes 
+                            security, performance, and scalability from the ground up. With modular, cloud-native tools and 
+                            continuous integration, deployment is seamless, future-proof, and built for rapid evolution.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+                            <img src="images/svg/code-icon.svg" alt="Code" class="w-8 h-8">
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Enterprise Development</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Full-stack development using modern frameworks, cloud-native tooling, and AI-enablement where it drives impact. Built with enterprise-grade security, scalability, and performance at the core.</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+                            <img src="images/svg/cpu-icon.svg" alt="CPU" class="w-8 h-8">
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Architecture & Design</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Future-proof system architecture with a focus on modularity, data flow, and AI integration. Paired with intuitive, user-centric UI/UX design for seamless user experiences across platforms.</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-6">
+                            <img src="images/svg/shield-check-icon.svg" alt="Shield Check" class="w-8 h-8">
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Consulting & Support</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Strategic consulting to align tech decisions with business goals. From AI readiness assessments to system audits, we provide expert guidance and ongoing support to ensure long-term efficiency and scalable growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tech Stack Section -->
+        <section id="tech" class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Our Tech Stack</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">AI-enabled, enterprise-grade technologies powering scalable, intelligent solutions</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <!-- TypeScript -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/typescript.svg" alt="TypeScript" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">TypeScript</span>
+                    </div>
+                    
+                    <!-- Python -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/python.svg" alt="Python" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Python</span>
+                    </div>
+                    
+                    <!-- Angular -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/angular.svg" alt="Angular" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Angular</span>
+                    </div>
+                    
+                    <!-- React -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/react.svg" alt="React" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">React</span>
+                    </div>
+                    
+                    <!-- NestJS -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/nestjs.svg" alt="NestJS" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">NestJS</span>
+                    </div>
+                    
+                    <!-- PostgreSQL -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/postgres.svg" alt="PostgreSQL" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">PostgreSQL</span>
+                    </div>
+                    
+                    <!-- GraphQL -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/graphql.svg" alt="GraphQL" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">GraphQL</span>
+                    </div>
+                    
+                    <!-- AWS -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/aws.svg" alt="AWS" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">AWS</span>
+                    </div>
+                    
+                    <!-- Azure -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/azure.svg" alt="Azure" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Azure</span>
+                    </div>
+                    
+                    <!-- Docker -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/docker.svg" alt="Docker" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Docker</span>
+                    </div>
+                    
+                    <!-- Microservices -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/microservices.svg" alt="Microservices" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Microservices</span>
+                    </div>
+                    
+                    <!-- NextJS -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/nextjs.svg" alt="Next.js" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Next.js</span>
+                    </div>
+                    
+                    <!-- NodeJS -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/nodejs.svg" alt="Node.js" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Node.js</span>
+                    </div>
+                    
+                    <!-- AI/ML -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/ai-ml.svg" alt="AI/ML" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">AI/ML</span>
+                    </div>
+                    
+                    <!-- LLMs -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/llms.svg" alt="LLMs" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">LLMs</span>
+                    </div>
+                    
+                    <!-- Ollama -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/ollama.svg" alt="Ollama" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">Ollama</span>
+                    </div>
+                    
+                    <!-- MLX -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/mlx.svg" alt="MLX" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">MLX</span>
+                    </div>
+                    
+                    <!-- More -->
+                    <div class="flex flex-col items-center group">
+                        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md group-hover:shadow-xl transition-shadow">
+                            <img src="images/svg/more.svg" alt="More" class="h-16 w-16">
+                        </div>
+                        <span class="mt-2 text-sm font-medium">More...</span>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 dark:text-gray-400">
+                        <span class="font-semibold">Additional Tech Stack:</span> Django, Material UI, Cypress, Playwright, Jest, Vite, 
+                        Redux, pgvector, PostGIS, Jenkins, OAuth, SSO, LDAP, JWT, Pandas, Vectorization, 
+                        Automation, Fine-tuning, GraphQL, LangChain, LlamaIndex, TailwindCSS, and more
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">About Us</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">Leadership team driving innovation and excellence</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Val Neekman -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-8">
+                        <div class="text-center mb-6">
+                            <img src="images/val-neekman.jpeg" alt="Val Neekman" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-lg">
+                            <h3 class="text-2xl font-bold mb-1">Val Neekman</h3>
+                            <p class="text-blue-600 dark:text-blue-400 font-semibold">Founder & Principal Consultant</p>
+                        </div>
+                        <div class="text-gray-600 dark:text-gray-400 space-y-3">
+                            <p>
+                                Val Neekman leads Neekware Inc. with over 20 years of experience delivering scalable, AI-enabled 
+                                enterprise applications. He specializes in complex software initiatives, whether building new systems 
+                                or revitalizing projects needing strong technical and product leadership.
+                            </p>
+                            <p>
+                                Val combines deep product expertise with hands-on technical skills to design cloud-native and on-premise 
+                                solutions focused on AI integration and clean architecture. Based in Waterloo, Ontario, he partners closely 
+                                with clients to align business goals with software delivery, ensuring projects move fast, scale efficiently, 
+                                and deliver measurable results.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cathy H. Liu -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-8">
+                        <div class="text-center mb-6">
+                            <img src="images/cathy-liu.png" alt="Cathy H. Liu" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-lg">
+                            <h3 class="text-2xl font-bold mb-1">Cathy H. Liu</h3>
+                            <p class="text-blue-600 dark:text-blue-400 font-semibold">Account Manager</p>
+                        </div>
+                        <div class="text-gray-600 dark:text-gray-400 space-y-3">
+                            <p>
+                                Cathy H. Liu manages client accounts and billing at Neekware Inc., bringing over 15 years of experience 
+                                in client communication and project coordination. She ensures seamless updates and acts as the primary 
+                                liaison between clients and delivery teams, keeping projects on track and stakeholders informed.
+                            </p>
+                            <p>
+                                A Computer Engineering graduate based in Ontario, Cathy combines technical insight with client-focused 
+                                professionalism to maintain strong relationships and smooth project execution across diverse engagements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clients Section -->
+        <section id="clients" class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Our Clients</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">Trusted by industry leaders worldwide</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+                    <!-- Client logos with fun fonts -->
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-3xl font-black bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent" style="font-family: Impact, sans-serif;">McAfee</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-3xl font-bold text-blue-600 dark:text-blue-400" style="font-family: Arial Black, sans-serif; letter-spacing: -2px;">intel</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-2xl font-light tracking-widest text-gray-700 dark:text-gray-300" style="font-family: Georgia, serif;">CASENET</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent" style="font-family: Comic Sans MS, cursive; transform: rotate(-3deg);">Doozee</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-xl font-extrabold uppercase tracking-wider text-gray-800 dark:text-gray-200" style="font-family: Courier New, monospace;">OutsourFactor</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-2xl font-semibold text-green-600 dark:text-green-400" style="font-family: Verdana, sans-serif; font-style: italic;">NewJobList</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-4xl font-black bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent" style="font-family: Arial Black, sans-serif;">SURGE</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400" style="font-family: Trebuchet MS, sans-serif; letter-spacing: 3px;">CATALYTE</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 transform hover:scale-110 transition-transform">
+                        <div class="text-2xl font-medium bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent" style="font-family: Palatino, serif; font-variant: small-caps;">Wisachi</div>
+                    </div>
+                    <div class="flex items-center justify-center p-4 animate-pulse">
+                        <div class="text-xl font-light text-gray-600 dark:text-gray-400" style="font-family: cursive; font-style: italic;">and more...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Platform Features</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">Built-in capabilities for modern applications</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Clean Design -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/design-icon.svg" alt="Design" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Clean & Elegant Design</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Elegance in simplicity with modern UI/UX principles</p>
+                    </div>
+                    
+                    <!-- Error Detection -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/check-circle-icon.svg" alt="Check Circle" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Intelligent Error Detection</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Client-side validation and error handling</p>
+                    </div>
+                    
+                    <!-- Theme Support -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/theme-icon.svg" alt="Theme" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Multiple Theme Support</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Light, Dark, and Custom themes</p>
+                    </div>
+                    
+                    <!-- i18n Support -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/language-icon.svg" alt="Language" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Multi-Language Support</h3>
+                        <p class="text-gray-600 dark:text-gray-400">i18n and l10n with RTL language support</p>
+                    </div>
+                    
+                    <!-- Notifications -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/bell-icon.svg" alt="Notifications" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Alert & Notifications</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Built-in notification system for user feedback</p>
+                    </div>
+                    
+                    <!-- Security -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lock-icon.svg" alt="Security" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Enterprise Security</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Built-in security features and best practices</p>
+                    </div>
+                    
+                    <!-- AI Enabled -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lightbulb-icon.svg" alt="AI" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">AI-Enabled Applications</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Seamless AI integration with privacy-first architecture</p>
+                    </div>
+                    
+                    <!-- Data Privacy -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/shield-icon.svg" alt="Privacy" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Data Privacy Protection</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Your data stays secure with on-premise deployment options</p>
+                    </div>
+                    
+                    <!-- Performance & Quality Experience -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lightning-icon.svg" alt="Performance" class="w-10 h-10">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Performance & Quality Experience</h3>
+                        <p class="text-gray-600 dark:text-gray-400">End-to-end optimization for speed, scale, and seamless user journey</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Engage Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">How to Engage with Us</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">Simple steps to start your project</p>
+                </div>
+                
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Reach out via email or phone and share your requirements</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <h3 class="text-lg font-semibold mb-2">Statement of Work</h3>
+                        <p class="text-gray-600 dark:text-gray-400">We'll promptly respond with a detailed statement of work</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <h3 class="text-lg font-semibold mb-2">Finalize Details</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Collaborate to finalize project details and comprehensive quote</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                        <h3 class="text-lg font-semibold mb-2">Kickstart Project</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Begin development with ongoing consulting support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800 dark:from-blue-950 dark:to-blue-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+                <p class="text-xl text-blue-200 mb-8">Let's build something amazing together</p>
+                <a href="#contact" class="px-8 py-3 bg-white text-blue-800 rounded-lg hover:bg-gray-100 transition-colors inline-block font-semibold">
+                    Get Started
+                </a>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">We'd love to hear from you</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2 text-blue-600 dark:text-blue-400">Address</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        <strong>Neekware Inc.</strong><br>
+                                        133 Weber St. N. Suite 3-204<br>
+                                        Waterloo, N2J 3G9<br>
+                                        Canada
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2 text-blue-600 dark:text-blue-400">Phone</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        <a href="tel:+12264761569" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                            +1 (226) 476-1569 (Ex: 300)
+                                        </a>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2 text-blue-600 dark:text-blue-400">Email</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">
+                                        <a href="mailto:info@neekware.com" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                            info@neekware.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2 text-blue-600 dark:text-blue-400">Business Hours</h4>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                                Saturday - Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Send us a Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea rows="4" name="message" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Terms & Conditions and Privacy Section -->
+        <section class="py-16 bg-gray-100 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Privacy -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Privacy</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            This website does not collect any personal information or track your activity.
+                        </p>
+                    </div>
+                    
+                    <!-- Terms & Conditions -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Terms & Conditions</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Neekware Inc. and its staff have developed and published various open-source software, scripts, and projects. 
+                            By using any open-source software from Neekware Inc., you agree to comply with the licensing terms and 
+                            conditions specific to each software or repository.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-8 bg-gray-900 text-gray-400">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <img x-show="!darkMode" src="images/svg/neekware-light.svg" alt="Neekware" class="h-6 w-auto">
+                        <img x-show="darkMode" src="images/svg/neekware-dark.svg" alt="Neekware" class="h-6 w-auto">
+                        <span class="ml-2 font-semibold">Neekware</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                        <a href="#privacy" class="hover:text-white transition-colors" @click="window.scrollTo({ top: document.querySelector('.py-16').offsetTop, behavior: 'smooth' })">Privacy</a>
+                        <a href="#terms" class="hover:text-white transition-colors" @click="window.scrollTo({ top: document.querySelector('.py-16').offsetTop, behavior: 'smooth' })">Terms & Conditions</a>
+                        <p>&copy; 2006-<span id="currentYear"></span> Neekware Inc. All rights reserved.</p>
+                    </div>
+                </div>
+                
+                <!-- Social Sharing Section -->
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                    <p class="mb-4 text-sm">Share Neekware Inc.</p>
+                    <div class="flex justify-center gap-4">
+                        <!-- LinkedIn Share Button -->
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://neekware.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-lg transition-colors">
+                            <img src="images/svg/linkedin-icon.svg" alt="LinkedIn" class="w-5 h-5 mr-2">
+                            Share on LinkedIn
+                        </a>
+                        
+                        <!-- X.com (Twitter) Share Button -->
+                        <a href="https://twitter.com/intent/tweet?url=https://neekware.com&text=Check%20out%20Neekware%20Inc.%20-%20Enterprise%20Application%20Development%20with%20AI-Enabled%20Solutions" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors">
+                            <img src="images/svg/x-icon.svg" alt="X" class="w-5 h-5 mr-2">
+                            Share on X
+                        </a>
+                        
+                        <!-- Facebook Share Button -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://neekware.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors">
+                            <img src="images/svg/facebook-icon.svg" alt="Facebook" class="w-5 h-5 mr-2">
+                            Share on Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
