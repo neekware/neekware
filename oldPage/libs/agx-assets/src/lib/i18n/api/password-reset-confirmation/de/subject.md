@@ -1,1 +1,0 @@
-{{Firma_v}} | Das Passwort Ihres Kontos wurde geändert!

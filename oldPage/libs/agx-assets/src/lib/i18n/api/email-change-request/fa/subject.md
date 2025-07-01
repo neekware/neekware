@@ -1,1 +1,0 @@
-{{RegexCompanyName}} | تغییر ایمیل!
