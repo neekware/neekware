@@ -256,7 +256,6 @@
                     
                     <!-- Desktop Navigation -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
                         <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Services</a>
                         <a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Features</a>
                         <a href="#tech" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tech Stack</a>
@@ -289,7 +288,6 @@
             <!-- Mobile Menu -->
             <div x-show="mobileMenu" x-transition class="md:hidden glass">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#about" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">About</a>
                     <a href="#services" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Services</a>
                     <a href="#features" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Features</a>
                     <a href="#tech" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Tech Stack</a>
@@ -392,11 +390,110 @@
                         <p class="text-gray-600 dark:text-gray-400">Strategic consulting to align tech decisions with business goals. From AI readiness assessments to system audits, we provide expert guidance and ongoing support to ensure long-term efficiency and scalable growth.</p>
                     </div>
                 </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                        Led by seasoned technical leadership with over 20 years of enterprise experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Platform Features</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">Built-in capabilities for modern applications</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Clean Design -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/design-icon.svg" alt="Design" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Clean & Elegant Design</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Elegance in simplicity with modern UI/UX principles</p>
+                    </div>
+                    
+                    <!-- Error Detection -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/check-circle-icon.svg" alt="Check Circle" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Intelligent Error Detection</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Client-side validation and error handling</p>
+                    </div>
+                    
+                    <!-- Theme Support -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/theme-icon.svg" alt="Theme" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Multiple Theme Support</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Light, Dark, and Custom themes</p>
+                    </div>
+                    
+                    <!-- i18n Support -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/language-icon.svg" alt="Language" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Multi-Language Support</h3>
+                        <p class="text-gray-600 dark:text-gray-400">i18n and l10n with RTL language support</p>
+                    </div>
+                    
+                    <!-- Notifications -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/bell-icon.svg" alt="Notifications" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Alert & Notifications</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Built-in notification system for user feedback</p>
+                    </div>
+                    
+                    <!-- Security -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lock-icon.svg" alt="Security" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Enterprise Security</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Built-in security features and best practices</p>
+                    </div>
+                    
+                    <!-- AI Enabled -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lightbulb-icon.svg" alt="AI" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">AI-Enabled Applications</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Seamless AI integration with privacy-first architecture</p>
+                    </div>
+                    
+                    <!-- Data Privacy -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/shield-icon.svg" alt="Privacy" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Data Privacy Protection</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Your data stays secure with on-premise deployment options</p>
+                    </div>
+                    
+                    <!-- Performance & Quality Experience -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <img src="images/svg/lightning-icon.svg" alt="Performance" class="w-10 h-10 icon-gray-dark">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Performance & Quality Experience</h3>
+                        <p class="text-gray-600 dark:text-gray-400">End-to-end optimization for speed, scale, and seamless user journey</p>
+                    </div>
+                </div>
             </div>
         </section>
         
         <!-- Tech Stack Section -->
-        <section id="tech" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <section id="tech" class="py-20 bg-white dark:bg-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold mb-4">Our Tech Stack</h2>
@@ -559,60 +656,6 @@
             </div>
         </section>
         
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-white dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-4">About Us</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400">Leadership team driving innovation and excellence</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                    <!-- Val Neekman -->
-                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-8">
-                        <div class="text-center mb-6">
-                            <img src="images/val-neekman.jpeg" alt="Val Neekman" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-lg">
-                            <h3 class="text-2xl font-bold mb-1"><img src="images/svg/t.m.1.svg" alt="Team member" class="h-7 inline-block dark:invert"></h3>
-                            <p class="text-blue-600 dark:text-gray-300 font-semibold">Founder & Principal Consultant</p>
-                        </div>
-                        <div class="text-gray-600 dark:text-gray-400 space-y-3">
-                            <p>
-                                Our founder leads Neekware Inc. with over 20 years of experience delivering scalable, AI-enabled 
-                                enterprise applications. He specializes in complex software initiatives, whether building new systems 
-                                or revitalizing projects needing strong technical and product leadership.
-                            </p>
-                            <p>
-                                He combines deep product expertise with hands-on technical skills to design cloud-native and on-premise 
-                                solutions focused on AI integration and clean architecture. Based in Waterloo, Ontario, he partners closely 
-                                with clients to align business goals with software delivery, ensuring projects move fast, scale efficiently, 
-                                and deliver measurable results.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Cathy H. Liu -->
-                    <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-8">
-                        <div class="text-center mb-6">
-                            <img src="images/cathy-liu.png" alt="Cathy H. Liu" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-lg">
-                            <h3 class="text-2xl font-bold mb-1"><img src="images/svg/t.m.2.svg" alt="Team member" class="h-7 inline-block dark:invert"></h3>
-                            <p class="text-blue-600 dark:text-gray-300 font-semibold">Account Manager</p>
-                        </div>
-                        <div class="text-gray-600 dark:text-gray-400 space-y-3">
-                            <p>
-                                Our account manager handles client accounts and billing at Neekware Inc., bringing over 15 years of experience 
-                                in client communication and project coordination. She ensures seamless updates and acts as the primary 
-                                liaison between clients and delivery teams, keeping projects on track and stakeholders informed.
-                            </p>
-                            <p>
-                                A Computer Engineering graduate based in Ontario, Cathy combines technical insight with client-focused 
-                                professionalism to maintain strong relationships and smooth project execution across diverse engagements.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <!-- Clients Section -->
         <section id="clients" class="py-20 bg-gray-50 dark:bg-gray-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -657,99 +700,6 @@
             </div>
         </section>
         
-        <!-- Features Section -->
-        <section id="features" class="py-20 bg-white dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-4">Platform Features</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400">Built-in capabilities for modern applications</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Clean Design -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/design-icon.svg" alt="Design" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Clean & Elegant Design</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Elegance in simplicity with modern UI/UX principles</p>
-                    </div>
-                    
-                    <!-- Error Detection -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/check-circle-icon.svg" alt="Check Circle" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Intelligent Error Detection</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Client-side validation and error handling</p>
-                    </div>
-                    
-                    <!-- Theme Support -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/theme-icon.svg" alt="Theme" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Multiple Theme Support</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Light, Dark, and Custom themes</p>
-                    </div>
-                    
-                    <!-- i18n Support -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/language-icon.svg" alt="Language" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Multi-Language Support</h3>
-                        <p class="text-gray-600 dark:text-gray-400">i18n and l10n with RTL language support</p>
-                    </div>
-                    
-                    <!-- Notifications -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/bell-icon.svg" alt="Notifications" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Alert & Notifications</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Built-in notification system for user feedback</p>
-                    </div>
-                    
-                    <!-- Security -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/lock-icon.svg" alt="Security" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Enterprise Security</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Built-in security features and best practices</p>
-                    </div>
-                    
-                    <!-- AI Enabled -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/lightbulb-icon.svg" alt="AI" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">AI-Enabled Applications</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Seamless AI integration with privacy-first architecture</p>
-                    </div>
-                    
-                    <!-- Data Privacy -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/shield-icon.svg" alt="Privacy" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Data Privacy Protection</h3>
-                        <p class="text-gray-600 dark:text-gray-400">Your data stays secure with on-premise deployment options</p>
-                    </div>
-                    
-                    <!-- Performance & Quality Experience -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 bg-blue-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <img src="images/svg/lightning-icon.svg" alt="Performance" class="w-10 h-10 icon-gray-dark">
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Performance & Quality Experience</h3>
-                        <p class="text-gray-600 dark:text-gray-400">End-to-end optimization for speed, scale, and seamless user journey</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <!-- How to Engage Section -->
         <section class="py-20 bg-gray-50 dark:bg-gray-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -787,10 +737,7 @@
         <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800 dark:from-blue-950 dark:to-blue-900">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
-                <p class="text-xl text-blue-200 mb-8">Let's build something amazing together</p>
-                <a href="#contact" class="px-8 py-3 bg-white text-blue-800 rounded-lg hover:bg-gray-100 transition-colors inline-block font-semibold">
-                    Get Started
-                </a>
+                <p class="text-xl text-blue-200">Let's build something amazing together</p>
             </div>
         </section>
         
