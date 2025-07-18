@@ -400,3 +400,20 @@
     filter: blur(2px);
   }
 }
+
+/* Support card flex layout for aligned buttons */
+.support-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.support-card .text-center {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.support-card .support-button {
+  margin-top: auto;
+}

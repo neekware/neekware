@@ -6,7 +6,7 @@ tailwind.config = {
 // Basic ehAye config functionality
 function ehayeConfig() {
   return {
-    darkMode: false,
+    darkMode: true,
     mobileMenu: false,
     config: {
       primaryVoice: 'Nathan',
@@ -18,7 +18,8 @@ function ehayeConfig() {
     },
     
     init() {
-      this.darkMode = localStorage.getItem('darkMode') === 'true';
+      const stored = localStorage.getItem('darkMode');
+      this.darkMode = stored === null ? true : stored === 'true';
       this.$watch('darkMode', value => localStorage.setItem('darkMode', value));
       
       // Set current year
