@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ehAye Audio - Smart Audio for AI Coding</title>
+    <meta
+      name="description"
+      content="ehAye (pronounced 'A.I.') Audio - Smart Voice for Artificial Intelligence coding assistants. Give your A.I. a voice with dual voice support and real-time configuration."
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ehAye Audio - Smart Audio for AI Coding" />
+    <meta
+      property="og:description"
+      content="Give your A.I. (Artificial Intelligence) a voice! Smart audio for A.I. coding assistants with dual voice support and real-time configuration."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://neekware.com/ehaye/" />
+    <meta property="og:site_name" content="ehAye Audio" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ehAye Audio - Smart Audio for AI Coding" />
+    <meta
+      name="twitter:description"
+      content="ehAye Audio - Give your A.I. a voice! Smart audio for Artificial Intelligence coding assistants with dual voice support."
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta
+      name="keywords"
+      content="text-to-speech, TTS, Claude Code, audio, voice, speech synthesis, AI assistant"
+    />
+    <meta name="author" content="ehAye Audio" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+    <link rel="shortcut icon" href="images/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ehAye" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tom Select for searchable dropdowns -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Custom JavaScript -->
+    <script src="index.js"></script>
+    
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  </head>
+  <body
+    x-data="ehayeConfig()"
+    x-init="init()"
+    :class="darkMode ? 'dark' : ''"
+    class="transition-colors duration-300"
+  >
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <!-- Navigation -->
+      <nav class="fixed w-full top-0 z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <a href="/ehaye/" class="flex items-center">
+              <img src="/ehaye/images/ehAye.png" alt="ehAye Audio" class="w-8 h-8 mr-2">
+              <span class="text-xl font-bold">ehAye Audio</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a
+                href="#services"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >Features</a
+              >
+              <a
+                href="#configuration"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >Configure</a
+              >
+              <a
+                href="#contribute"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >Contribute</a
+              >
+              <a
+                href="../"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >← Back to Neekware</a
+              >
+
+              <!-- Theme Toggle -->
+              <button
+                @click="darkMode = !darkMode"
+                class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors theme-toggle-btn"
+              >
+                <img x-show="!darkMode" src="../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                <img x-show="darkMode" src="../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
+              </button>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+              <button
+                @click="darkMode = !darkMode"
+                class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-2 theme-toggle-btn"
+              >
+                <img x-show="!darkMode" src="../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                <img x-show="darkMode" src="../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
+              </button>
+              <button @click="mobileMenu = !mobileMenu" class="p-2">
+                <span class="text-xl">☰</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenu" x-transition class="md:hidden glass">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="#services"
+              @click="mobileMenu = false"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >Features</a
+            >
+            <a
+              href="#configuration"
+              @click="mobileMenu = false"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >Configure</a
+            >
+            <a
+              href="#contribute"
+              @click="mobileMenu = false"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >Contribute</a
+            >
+            <a
+              href="../"
+              @click="mobileMenu = false"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >← Back to Neekware</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="min-h-[50vh] py-8 pt-20 flex items-center justify-center relative overflow-hidden bg-white dark:bg-gray-900"
+      >
+        <!-- Dancing gradient balls -->
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="gradient-ball ball-1"></div>
+          <div class="gradient-ball ball-2"></div>
+          <div class="gradient-ball ball-3"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center">
+            <div class="text-8xl md:text-9xl mb-3 float-animation">🔊</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              ehAye<span class="text-lg md:text-xl font-normal relative -top-3">™</span> Audio
+            </h1>
+            <h2 class="text-xl md:text-2xl font-semibold mb-2 text-gray-700 dark:text-gray-300">
+              Smart Voice for A.I. Coding
+            </h2>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-2 max-w-3xl mx-auto">
+              Dual Voice Support. Real-time Configuration
+            </p>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">
+              Give Your Artificial Intelligence a Voice
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#services"
+                class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold"
+              >
+                Explore Features
+              </a>
+              <a
+                href="#get-started"
+                class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold"
+              >
+                Get Started
+              </a>
+            </div>
+            <div class="mt-4">
+              <a
+                href="#configuration"
+                class="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors inline-block font-semibold"
+              >
+                Configure
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Features Section -->
+      <section id="services" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">What It Does</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Give your A.I. (Artificial Intelligence) a voice with dual voice support, real-time configuration, and
+              seamless A.I. Code integrations
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <!-- What is ehAye Audio -->
+            <div
+              class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow"
+            >
+              <h3 class="text-2xl font-semibold mb-4">What is ehAye Audio?</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                <strong>ehAye</strong> (pronounced "A.I.") — A name that nods to Canadian "eh?" and Scottish "aye" (yes). It gives your code a voice: clear, confident, and intelligent. Get smart voice notifications for A.I. coding assistants like Claude Code™, with real-time audio feedback and dual voice support for better context awareness.
+              </p>
+              <p class="text-blue-600 dark:text-gray-300 font-semibold mt-4">
+                Give your Artificial Intelligence the voice it deserves.
+              </p>
+            </div>
+
+            <!-- Claude Code Integration -->
+            <div
+              class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow"
+            >
+              <h3 class="text-2xl font-semibold mb-4">A.I. Code Integration</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Seamlessly integrates with A.I. coding assistants like Anthropic's Claude Code™ to provide real-time audio announcements, notifications, and feedback during development. Modular design enables easy extension, with planned support for Google's Gemini Code™ and other emerging A.I. platforms.
+              </p>
+              <p class="text-blue-600 dark:text-gray-300 font-semibold mt-4">
+                Audio on demand through simple commands.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <span class="text-4xl">🎭</span>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Dual Voice Support</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Assign one voice per agent to instantly recognize which task is speaking or
+                completed. Configure primary and secondary voices for completions, system messages,
+                and notifications. Enables seamless multitasking with clear, contextual audio cues.
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <span class="text-4xl">⚡</span>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Real-time Configuration</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Adjust speech rate, volume, and voice settings instantly via the web dashboard—no
+                downtime required. Changes take effect immediately. Your A.I. (e.g. Claude) may
+                need a restart only for hook or instruction updates.
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-700 hover:shadow-xl transition-shadow"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mb-6"
+              >
+                <span class="text-4xl">🔧</span>
+              </div>
+              <h3 class="text-2xl font-semibold mb-4">Easy Management</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Control everything with simple CLI commands and an intuitive web interface. Start,
+                stop, and monitor the voice engine effortlessly using built-in process management.
+                Designed for developers who want zero-friction control without leaving their
+                workflow.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Get Started Section -->
+      <section id="get-started" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Get Started</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400">
+              Ready to give your A.I. (Artificial Intelligence) a voice with ehAye Audio?
+            </p>
+          </div>
+
+          <!-- Installation -->
+          <div class="max-w-4xl mx-auto mb-12">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 class="text-xl font-semibold mb-4">📦 Installation</h3>
+              <div class="space-y-3">
+                <p class="text-gray-600 dark:text-gray-400">
+                  <strong>Install globally with:</strong><br />
+                  <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded"
+                    >npm install -g @eh-aye/audio</code
+                  >
+                </p>
+                <p class="text-gray-600 dark:text-gray-400">
+                  The engine starts automatically after installation. Restart Claude in your project
+                  to activate.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400">
+                  <strong>In Claude Code, use:</strong><br />
+                  <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">/audio enable</code>
+                  <span class="text-sm"> — connect audio to your project</span><br />
+                  <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">/audio disable</code>
+                  <span class="text-sm"> — disable audio output</span><br />
+                  <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">/audio status</code>
+                  <span class="text-sm"> — verify audio connection status</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- Configuration Section -->
+      <section id="configuration" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Configuration Dashboard</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400">Configure ehAye Audio settings (requires installed app)</p>
+          </div>
+          
+          <div class="max-w-7xl mx-auto">
+              <div class="bg-blue-50 dark:bg-gray-800 p-8 rounded-2xl">
+                <div class="text-center mb-8">
+                  <h3 class="text-3xl font-bold mb-4">🔊 ehAye Audio Configuration Dashboard</h3>
+                  <p class="text-lg text-gray-600 dark:text-gray-400">Configuration interface (requires installed app)</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">Version 0.1.0</p>
+                </div>
+
+
+                <!-- Voice Configuration Cards -->
+                <div class="grid lg:grid-cols-2 gap-6">
+                  <!-- Primary Voice Card -->
+                  <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-green-200 dark:border-green-600">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center justify-between">
+                      <span class="flex items-center">
+                        <span class="mr-3">🎤</span>
+                        <span>Primary Voice</span>
+                      </span>
+                      <span id="save-indicator-primary" class="text-green-600 dark:text-green-400 text-base font-normal opacity-0 transition-opacity duration-500"></span>
+                    </h4>
+                    <div class="space-y-4">
+                      <!-- Voice Selection -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Voice:
+                        </label>
+                        <div class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-100">
+                          Nathan
+                        </div>
+                      </div>
+
+                      <!-- Volume -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Volume: <span class="font-bold text-green-600 dark:text-green-400">80</span>%
+                        </label>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                          <div class="h-2 bg-green-600 dark:bg-green-400 rounded-full" style="width: 80%"></div>
+                        </div>
+                      </div>
+
+                      <!-- Speech Rate -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Speech Rate: <span class="font-bold text-green-600 dark:text-green-400">180</span> WPM
+                        </label>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                          <div class="h-2 bg-green-600 dark:bg-green-400 rounded-full" style="width: 62.5%"></div>
+                        </div>
+                      </div>
+
+                      <!-- Test Message -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Test Message:
+                        </label>
+                        <div class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-100 text-sm">
+                          Hello there, I am your primary AI voice assistant, ready to serve!
+                        </div>
+                      </div>
+
+                      <!-- Test Button -->
+                      <div class="w-full px-6 py-3 bg-gray-400 text-white rounded-lg font-semibold flex items-center justify-center cursor-not-allowed">
+                        <span class="mr-2">🔊</span> 
+                        <span>Test Primary Voice (Install App)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Secondary Voice Card -->
+                  <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-purple-200 dark:border-purple-600">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center justify-between">
+                      <span class="flex items-center">
+                        <span class="mr-3">🎭</span>
+                        <span>Secondary Voice</span>
+                      </span>
+                      <span id="save-indicator-secondary" class="text-green-600 dark:text-green-400 text-base font-normal opacity-0 transition-opacity duration-500"></span>
+                    </h4>
+                    <div class="space-y-4">
+                      <!-- Voice Selection -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Voice:
+                        </label>
+                        <div class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-100">
+                          Samantha
+                        </div>
+                      </div>
+
+                      <!-- Volume -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Volume: <span class="font-bold text-purple-600 dark:text-purple-400">75</span>%
+                        </label>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                          <div class="h-2 bg-purple-600 dark:bg-purple-400 rounded-full" style="width: 75%"></div>
+                        </div>
+                      </div>
+
+                      <!-- Speech Rate -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Speech Rate: <span class="font-bold text-purple-600 dark:text-purple-400">175</span> WPM
+                        </label>
+                        <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                          <div class="h-2 bg-purple-600 dark:bg-purple-400 rounded-full" style="width: 56.25%"></div>
+                        </div>
+                      </div>
+
+                      <!-- Test Message -->
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Test Message:
+                        </label>
+                        <div class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-100 text-sm">
+                          Hi! I'm your backup AI voice, ready when you are.
+                        </div>
+                      </div>
+
+                      <!-- Test Button -->
+                      <div class="w-full px-6 py-3 bg-gray-400 text-white rounded-lg font-semibold flex items-center justify-center cursor-not-allowed">
+                        <span class="mr-2">🔊</span> 
+                        <span>Test Secondary Voice (Install App)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Status Panel - Full Width -->
+                <div class="mt-6">
+                  <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-blue-200 dark:border-gray-600">
+                    <h4 class="text-xl font-semibold mb-4 flex items-center">
+                      <span class="mr-3">📊</span> Engine Status
+                    </h4>
+                    <div class="space-y-3 mb-6">
+                      <div class="flex justify-between items-center">
+                        <span class="text-gray-600 dark:text-gray-400">Status:</span>
+                        <span class="flex items-center">
+                          <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                          <span class="font-semibold text-green-600 dark:text-green-400">Running</span>
+                        </span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-gray-600 dark:text-gray-400">Port:</span>
+                        <span class="font-semibold">3131</span>
+                      </div>
+                      <div class="flex justify-between items-center">
+                        <span class="text-gray-600 dark:text-gray-400">API Endpoint:</span>
+                        <span class="font-semibold text-sm">localhost:3131</span>
+                      </div>
+                    </div>
+
+                    <!-- CLI Commands Reference -->
+                    <div class="bg-gray-100 dark:bg-gray-600 p-4 rounded-lg">
+                      <h5 class="font-semibold mb-2">CLI Commands:</h5>
+                      <div class="space-y-1 font-mono text-sm">
+                        <p><code class="bg-gray-200 dark:bg-gray-500 px-2 py-1 rounded">ehaye audio test</code> - Test audio</p>
+                        <p><code class="bg-gray-200 dark:bg-gray-500 px-2 py-1 rounded">ehaye voice set primary "Nathan"</code></p>
+                        <p><code class="bg-gray-200 dark:bg-gray-500 px-2 py-1 rounded">ehaye voice set secondary "Samantha"</code></p>
+                        <p><code class="bg-gray-200 dark:bg-gray-500 px-2 py-1 rounded">ehaye config show</code> - Show config</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contribute Card -->
+      <div class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div id="contribute" class="max-w-4xl mx-auto">
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-blue-200 dark:border-blue-600">
+              <div class="text-center">
+                <div class="text-6xl mb-4">🤝</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Contribute to ehAye Audio</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                  Join us in making AI experience better for everyone
+                </p>
+                <h4 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
+                  Your Code. Your Ideas. Your Impact.
+                </h4>
+                <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-2xl mx-auto">
+                  Help shape the future of AI experiences
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                  Every contribution makes a difference
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://github.com/neekware/eh-aye-audio"
+                    target="_blank"
+                    class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-semibold"
+                  >
+                    View on GitHub
+                  </a>
+                  <a
+                    href="https://github.com/neekware/eh-aye-audio/issues"
+                    target="_blank"
+                    class="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white transition-colors font-semibold"
+                  >
+                    Browse Issues
+                  </a>
+                  <a
+                    href="https://github.com/neekware/eh-aye-audio/discussions"
+                    target="_blank"
+                    class="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white transition-colors font-semibold"
+                  >
+                    Join Discussions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Pay What You Want – Your AI Audio Mentor</h2>
+              <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
+                Your AI coding agent just got a voice. Now your code can speak—and you can listen.
+              </p>
+              <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-2xl mb-8">
+                <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Price: $50.00 per ehAye Audio</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400">Or choose from the support tiers below:</p>
+              </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="mb-8">
+              <h3 class="text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-white">📦 Support Suggestions</h3>
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Infinity Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-green-200 dark:border-green-600">
+                  <div class="text-center">
+                    <h4 class="text-xl font-bold mb-2 text-green-600 dark:text-green-400">Infinity Backing</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$10<span class="text-base font-normal text-gray-600 dark:text-gray-400">/month</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">Ongoing support. Cancel anytime.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Back the project with consistent monthly support. Ideal for those who want to see continuous development and feature expansion. You're not just donating—you're part of the evolution.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 transition-colors font-semibold">
+                      Subscribe
+                    </a>
+                  </div>
+                  </div>
+                </div>
+
+                <!-- Pro Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-blue-200 dark:border-blue-600">
+                  <div class="text-center">
+                    <h4 class="text-xl font-bold mb-2 text-blue-600 dark:text-blue-400">Pro Backing</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$9 <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">One-time support – students welcome.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Perfect for students, hobbyists, or anyone wanting to say thanks without a long-term commitment. A small gesture with real impact.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-semibold">
+                      Support
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Max Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-purple-200 dark:border-purple-600">
+                  <div class="text-center">
+                    <h4 class="text-xl font-bold mb-2 text-purple-600 dark:text-purple-400">Max Backing</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$19</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">Extra support for advanced users.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Support at a level that reflects heavier usage or deeper appreciation. Great for power users who want to contribute a bit more.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 transition-colors font-semibold">
+                      Support
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Ultra Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-orange-200 dark:border-orange-600">
+                  <div class="text-center">
+                    <h4 class="text-xl font-bold mb-2 text-orange-600 dark:text-orange-400">Ultra Backing</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$49</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">High-level backer tier.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">You believe in the vision and want to push it further. Your support helps fund major improvements and roadmap priorities.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 transition-colors font-semibold">
+                      Support
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Extreme Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-red-200 dark:border-red-600">
+                  <div class="text-center">
+                    <h4 class="text-xl font-bold mb-2 text-red-600 dark:text-red-400">Extreme Backing</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$99</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">For those who want to push the limits.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Maximum backing for serious supporters. You're helping us go beyond the expected—faster releases, deeper integrations, and ambitious goals.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 transition-colors font-semibold">
+                      Support
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Custom Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-600">
+                  <div class="text-center">
+                    <h4 class="text-xl font-bold mb-2 text-gray-600 dark:text-gray-400">Custom Backing</h4>
+                    <p class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">You Choose</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2">Enter your own price (USD).</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Set your own support level. Whether you're testing the waters or making a statement, we appreciate every contribution.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 transition-colors font-semibold">
+                      Custom Amount
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-2xl">
+              <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Ready to Give Your AI a Voice?</h3>
+              <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                Choose your support level and help us build the future of AI audio experiences.
+              </p>
+              <a
+                href="#get-started"
+                class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-semibold text-lg"
+              >
+                Get Started Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-8 bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col-reverse md:flex-row md:justify-between md:items-center">
+            <!-- Copyright and Disclaimer -->
+            <div class="text-center md:text-left">
+              <p class="mb-2">&copy; <span id="currentYear"></span> <a href="https://neekware.com" target="_blank">Neekware Inc.</a> | All rights reserved.</p>
+              <p class="text-sm text-gray-500">ehAye nor ehAye Audio and group of products are not affiliated with any ehAye records, music.</p>
+            </div>
+
+            <!-- Links -->
+            <div class="flex items-center gap-6 mb-4 md:mb-0 justify-center md:justify-end">
+              <a
+                href="https://github.com/neekware/eh-aye-audio"
+                target="_blank"
+                class="hover:text-white transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://npmjs.com/package/@eh-aye/audio"
+                target="_blank"
+                class="hover:text-white transition-colors"
+              >
+                NPM
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
