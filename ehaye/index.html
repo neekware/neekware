@@ -92,11 +92,6 @@
                 class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >Contribute</a
               >
-              <a
-                href="../"
-                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >← Back to Neekware</a
-              >
 
               <!-- Theme Toggle -->
               <button
@@ -145,12 +140,6 @@
               class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
               >Contribute</a
             >
-            <a
-              href="../"
-              @click="mobileMenu = false"
-              class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
-              >← Back to Neekware</a
-            >
           </div>
         </div>
       </nav>
@@ -169,10 +158,58 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="text-center">
-            <div class="text-8xl md:text-9xl mb-3 float-animation">🔊</div>
+            <div class="mb-3 float-animation relative px-0">
+              <!-- Left side sound waves -->
+              <div class="absolute left-0 top-1/2 transform -translate-y-1/2" style="transform: translateX(-50%) translateX(50px) translateY(-50%);">
+                <div class="flex items-center space-x-1">
+                  <div class="w-1 bg-blue-500 sound-wave" style="animation-delay: 0s;"></div>
+                  <div class="w-1 bg-blue-400 sound-wave" style="animation-delay: 0.1s;"></div>
+                  <div class="w-1 bg-blue-300 sound-wave" style="animation-delay: 0.2s;"></div>
+                  <div class="w-1 bg-blue-200 sound-wave" style="animation-delay: 0.3s;"></div>
+                </div>
+              </div>
+              
+              <!-- Main logo -->
+              <img src="images/ehAye.png" alt="ehAye Audio" class="w-44 h-44 md:w-52 md:h-52 mx-auto relative z-10">
+              
+              <!-- Right side sound waves -->
+              <div class="absolute right-0 top-1/2 transform -translate-y-1/2" style="transform: translateX(50%) translateX(-50px) translateY(-50%);">
+                <div class="flex items-center space-x-1">
+                  <div class="w-1 bg-purple-200 sound-wave" style="animation-delay: 0.4s;"></div>
+                  <div class="w-1 bg-purple-300 sound-wave" style="animation-delay: 0.5s;"></div>
+                  <div class="w-1 bg-purple-400 sound-wave" style="animation-delay: 0.6s;"></div>
+                  <div class="w-1 bg-purple-500 sound-wave" style="animation-delay: 0.7s;"></div>
+                </div>
+              </div>
+            </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               ehAye<span class="text-lg md:text-xl font-normal relative -top-3">™</span> Audio
             </h1>
+            
+            <!-- Speaking Animation -->
+            <div class="speaking-animation mb-6">
+              <!-- Center source -->
+              <div class="center-source"></div>
+              
+              <!-- Right-facing waves -->
+              <div class="waves-right">
+                <div class="wave-arc-right"></div>
+                <div class="wave-arc-right"></div>
+                <div class="wave-arc-right"></div>
+                <div class="wave-arc-right"></div>
+                <div class="wave-arc-right"></div>
+              </div>
+              
+              <!-- Left-facing waves -->
+              <div class="waves-left">
+                <div class="wave-arc-left"></div>
+                <div class="wave-arc-left"></div>
+                <div class="wave-arc-left"></div>
+                <div class="wave-arc-left"></div>
+                <div class="wave-arc-left"></div>
+              </div>
+            </div>
+            
             <h2 class="text-xl md:text-2xl font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Smart Voice for A.I. Coding
             </h2>
@@ -183,24 +220,15 @@
               Give Your Artificial Intelligence a Voice
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#services"
-                class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold"
-              >
+              <a href="#services" class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold">
                 Explore Features
               </a>
-              <a
-                href="#get-started"
-                class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold"
-              >
+              <a href="#get-started" class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold">
                 Get Started
               </a>
             </div>
             <div class="mt-4">
-              <a
-                href="#configuration"
-                class="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors inline-block font-semibold"
-              >
+              <a href="#configuration" class="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors inline-block font-semibold">
                 Configure
               </a>
             </div>
@@ -581,40 +609,35 @@
             <div class="text-center mb-12">
               <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Pay What You Want – Your AI Audio Mentor</h2>
               <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
-                Your AI coding agent just got a voice. Now your code can speak—and you can listen.
+                Your AI coding agent just got a voice. Now your code can speak, and you can listen.
               </p>
-              <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-2xl mb-8">
-                <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Price: $50.00 per ehAye Audio</h3>
-                <p class="text-lg text-gray-600 dark:text-gray-400">Or choose from the support tiers below:</p>
-              </div>
             </div>
 
             <!-- Pricing Cards -->
             <div class="mb-8">
-              <h3 class="text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-white">📦 Support Suggestions</h3>
+              <h3 class="text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-white">📦 Support Level Suggestions</h3>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Infinity Tier -->
-                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-green-200 dark:border-green-600">
+                <!-- Starter Tier -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-teal-200 dark:border-teal-600">
                   <div class="text-center">
-                    <h4 class="text-xl font-bold mb-2 text-green-600 dark:text-green-400">Infinity Backing</h4>
-                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$10<span class="text-base font-normal text-gray-600 dark:text-gray-400">/month</span></p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-2">Ongoing support. Cancel anytime.</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Back the project with consistent monthly support. Ideal for those who want to see continuous development and feature expansion. You're not just donating—you're part of the evolution.</p>
-                    <a href="#" class="w-full inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 transition-colors font-semibold">
-                      Subscribe
+                    <h4 class="text-xl font-bold mb-2 text-teal-600 dark:text-teal-400">Starter Backer</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$3 <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>Students & New Grads</strong></p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">A small, one-time contribution for those just starting out. Ideal for students and new grads who want to back open-source innovation without breaking the bank.</p>
+                    <a href="#" class="w-full inline-block px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 transition-colors font-semibold">
+                      Support
                     </a>
-                  </div>
                   </div>
                 </div>
 
                 <!-- Pro Tier -->
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-blue-200 dark:border-blue-600">
                   <div class="text-center">
-                    <h4 class="text-xl font-bold mb-2 text-blue-600 dark:text-blue-400">Pro Backing</h4>
+                    <h4 class="text-xl font-bold mb-2 text-blue-600 dark:text-blue-400">Pro Backer</h4>
                     <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$9 <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-2">One-time support – students welcome.</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Perfect for students, hobbyists, or anyone wanting to say thanks without a long-term commitment. A small gesture with real impact.</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>Jr. & Intermediates</strong></p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Ideal for new graduates, hobbyists, or anyone wanting to say thanks without a long-term commitment. A meaningful gesture with real impact.</p>
                     <a href="#" class="w-full inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-semibold">
                       Support
                     </a>
@@ -624,10 +647,10 @@
                 <!-- Max Tier -->
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-purple-200 dark:border-purple-600">
                   <div class="text-center">
-                    <h4 class="text-xl font-bold mb-2 text-purple-600 dark:text-purple-400">Max Backing</h4>
-                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$19</p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-2">Extra support for advanced users.</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Support at a level that reflects heavier usage or deeper appreciation. Great for power users who want to contribute a bit more.</p>
+                    <h4 class="text-xl font-bold mb-2 text-purple-600 dark:text-purple-400">Max Backer</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$19 <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>Senior & Advanced Users</strong></p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">A higher tier for experienced users who rely on the project and want to give back. Reflects deeper engagement and stronger support.</p>
                     <a href="#" class="w-full inline-block px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 transition-colors font-semibold">
                       Support
                     </a>
@@ -637,10 +660,10 @@
                 <!-- Ultra Tier -->
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-orange-200 dark:border-orange-600">
                   <div class="text-center">
-                    <h4 class="text-xl font-bold mb-2 text-orange-600 dark:text-orange-400">Ultra Backing</h4>
-                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$49</p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-2">High-level backer tier.</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">You believe in the vision and want to push it further. Your support helps fund major improvements and roadmap priorities.</p>
+                    <h4 class="text-xl font-bold mb-2 text-orange-600 dark:text-orange-400">Ultra Backer</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$49 <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>High-level Tier</strong></p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">For serious supporters who believe in the long-term vision. Your backing fuels major upgrades, roadmap milestones, and sustained development.</p>
                     <a href="#" class="w-full inline-block px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 transition-colors font-semibold">
                       Support
                     </a>
@@ -650,10 +673,10 @@
                 <!-- Extreme Tier -->
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-red-200 dark:border-red-600">
                   <div class="text-center">
-                    <h4 class="text-xl font-bold mb-2 text-red-600 dark:text-red-400">Extreme Backing</h4>
-                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$99</p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-2">For those who want to push the limits.</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Maximum backing for serious supporters. You're helping us go beyond the expected—faster releases, deeper integrations, and ambitious goals.</p>
+                    <h4 class="text-xl font-bold mb-2 text-red-600 dark:text-red-400">Extreme Backer</h4>
+                    <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$99 <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>Limit-Pusher Tier</strong></p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Top-tier support for those driving the project forward. You're enabling bold moves: faster releases, deeper integrations, and next-level innovation.</p>
                     <a href="#" class="w-full inline-block px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 transition-colors font-semibold">
                       Support
                     </a>
@@ -663,16 +686,29 @@
                 <!-- Custom Tier -->
                 <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-600">
                   <div class="text-center">
-                    <h4 class="text-xl font-bold mb-2 text-gray-600 dark:text-gray-400">Custom Backing</h4>
-                    <p class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">You Choose</p>
-                    <p class="text-gray-600 dark:text-gray-400 mb-2">Enter your own price (USD).</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Set your own support level. Whether you're testing the waters or making a statement, we appreciate every contribution.</p>
+                    <h4 class="text-xl font-bold mb-2 text-gray-600 dark:text-gray-400">Custom Backer</h4>
+                    <p class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">You Choose <span class="text-base font-normal text-gray-600 dark:text-gray-400">(One-time)</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>Enter Your Own Amount</strong></p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Pick the price that fits you. Whether it's a small show of support or a bold statement, every contribution moves the project forward.</p>
                     <a href="#" class="w-full inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 transition-colors font-semibold">
                       Custom Amount
                     </a>
                   </div>
                 </div>
 
+              </div>
+              
+              <!-- Infinity Tier - Full Width -->
+              <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg border border-green-200 dark:border-green-600 mt-6">
+                <div class="text-center">
+                  <h4 class="text-xl font-bold mb-2 text-green-600 dark:text-green-400">Infinity Backer</h4>
+                  <p class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">$10<span class="text-base font-normal text-gray-600 dark:text-gray-400">/month</span></p>
+                  <p class="text-gray-600 dark:text-gray-400 mb-2"><strong>Ongoing Support. Cancel Anytime.</strong></p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Sustain the project with steady monthly backing. Ideal for those who want to fuel continuous development, feature rollouts, and long-term growth.</p>
+                  <a href="#" class="w-full inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 transition-colors font-semibold">
+                    Subscribe
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -696,30 +732,21 @@
       <!-- Footer -->
       <footer class="py-8 bg-gray-900 text-gray-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-col-reverse md:flex-row md:justify-between md:items-center">
-            <!-- Copyright and Disclaimer -->
-            <div class="text-center md:text-left">
-              <p class="mb-2">&copy; <span id="currentYear"></span> <a href="https://neekware.com" target="_blank">Neekware Inc.</a> | All rights reserved.</p>
-              <p class="text-sm text-gray-500">ehAye nor ehAye Audio and group of products are not affiliated with any ehAye records, music.</p>
-            </div>
-
-            <!-- Links -->
-            <div class="flex items-center gap-6 mb-4 md:mb-0 justify-center md:justify-end">
-              <a
-                href="https://github.com/neekware/eh-aye-audio"
-                target="_blank"
-                class="hover:text-white transition-colors"
-              >
-                GitHub
+          <div class="flex flex-col">
+            <!-- Logo and Copyright on one line -->
+            <div class="flex items-center justify-center mb-4">
+              <a href="https://neekware.com" target="_blank" class="mr-6">
+                <img src="../images/svg/neekware-light.svg" alt="Neekware" class="h-12 dark:hidden">
+                <img src="../images/svg/neekware-dark.svg" alt="Neekware" class="h-12 hidden dark:block">
               </a>
-              <a
-                href="https://npmjs.com/package/@eh-aye/audio"
-                target="_blank"
-                class="hover:text-white transition-colors"
-              >
-                NPM
-              </a>
+              <p>&copy; <span id="currentYear"></span> <a href="https://neekware.com" target="_blank">Neekware Inc.</a> - All rights reserved.</p>
             </div>
+            
+            <!-- Divider -->
+            <div class="w-[30%] h-px bg-gray-600 mx-auto mb-4"></div>
+            
+            <!-- Legal Note -->
+            <p class="text-xs text-gray-500 text-center mt-2">Neither ehAye, ehAye Audio, nor any associated software products are affiliated with or derived from any music recordings, artists, or entities using the name "ehAye" or similar.</p>
           </div>
         </div>
       </footer>
