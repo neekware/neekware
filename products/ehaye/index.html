@@ -70,8 +70,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
             <!-- Logo -->
-            <a href="/ehaye/" class="flex items-center">
-              <img src="/ehaye/images/ehAye.png" alt="ehAye Audio" class="w-8 h-8 mr-2">
+            <a href="/products/ehaye/" class="flex items-center">
+              <img src="/products/ehaye/images/ehAye.png" alt="ehAye Audio" class="w-8 h-8 mr-2">
               <span class="text-xl font-bold">ehAye Audio</span>
             </a>
 
@@ -92,14 +92,19 @@
                 class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >Contribute</a
               >
+              <a
+                href="#funding"
+                class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >Funding</a
+              >
 
               <!-- Theme Toggle -->
               <button
                 @click="darkMode = !darkMode"
                 class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors theme-toggle-btn"
               >
-                <img x-show="!darkMode" src="../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
-                <img x-show="darkMode" src="../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
+                <img x-show="!darkMode" src="../../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                <img x-show="darkMode" src="../../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
               </button>
             </div>
 
@@ -109,8 +114,8 @@
                 @click="darkMode = !darkMode"
                 class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-2 theme-toggle-btn"
               >
-                <img x-show="!darkMode" src="../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
-                <img x-show="darkMode" src="../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
+                <img x-show="!darkMode" src="../../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                <img x-show="darkMode" src="../../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
               </button>
               <button @click="mobileMenu = !mobileMenu" class="p-2">
                 <span class="text-xl">☰</span>
@@ -139,6 +144,12 @@
               @click="mobileMenu = false"
               class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
               >Contribute</a
+            >
+            <a
+              href="#funding"
+              @click="mobileMenu = false"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              >Funding</a
             >
           </div>
         </div>
@@ -554,12 +565,12 @@
       </section>
 
       <!-- Contribute Card -->
-      <div class="py-20 bg-gray-50 dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div id="contribute" class="max-w-4xl mx-auto">
-            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-blue-200 dark:border-blue-600">
+      <div id="contribute" class="pt-32 pb-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div  class="max-w-3xl mx-auto">
+            <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg border border-blue-200 dark:border-blue-600">
               <div class="text-center">
-                <div class="text-6xl mb-4">🤝</div>
+                <div class="text-8xl mb-6">🤝</div>
                 <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Contribute to ehAye Audio</h3>
                 <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
                   Join us in making AI experience better for everyone
@@ -570,7 +581,7 @@
                 <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-2xl mx-auto">
                   Help shape the future of AI experiences
                 </p>
-                <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                <p class="text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
                   Every contribution makes a difference
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -602,10 +613,16 @@
         </div>
       </div>
 
-      <!-- Pricing Section -->
-      <section id="pricing" class="py-20 bg-white dark:bg-gray-800">
+      <!-- Funding Section -->
+      <section id="funding" class="py-20 bg-white dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="max-w-4xl mx-auto">
+            <!-- Funding Tag -->
+            <div class="text-center mb-8">
+              <span class="inline-block px-4 py-2 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-semibold">
+                💰 Funding
+              </span>
+            </div>
             <div class="text-center mb-12">
               <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Pay What You Want – Your AI Audio Mentor</h2>
               <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
@@ -739,8 +756,8 @@
             <!-- Logo and Copyright on one line -->
             <div class="flex items-center justify-center mb-4">
               <a href="https://neekware.com" target="_blank" class="mr-6">
-                <img src="../images/svg/neekware-light.svg" alt="Neekware" class="h-12 dark:hidden">
-                <img src="../images/svg/neekware-dark.svg" alt="Neekware" class="h-12 hidden dark:block">
+                <img src="../../images/svg/neekware-light.svg" alt="Neekware" class="h-12 dark:hidden">
+                <img src="../../images/svg/neekware-dark.svg" alt="Neekware" class="h-12 hidden dark:block">
               </a>
               <p>&copy; <span id="currentYear"></span> <a href="https://neekware.com" target="_blank">Neekware Inc.</a> - All rights reserved.</p>
             </div>
