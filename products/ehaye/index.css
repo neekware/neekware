@@ -1,3 +1,8 @@
+/* Smooth scroll padding for fixed navbar */
+html {
+  scroll-padding-top: 68px;
+}
+
 /* Custom animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -240,7 +245,7 @@
 .speaking-animation {
   position: relative;
   width: 300px;
-  height: 120px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
