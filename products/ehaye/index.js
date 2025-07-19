@@ -66,3 +66,33 @@ function ehayeConfig() {
     }
   };
 }
+
+// Navigation active state functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const sections = document.querySelectorAll('section[id], div[id]');
+
+  function updateActiveNavigation() {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      
+      if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('border-b-2', 'border-blue-600', 'dark:border-blue-400', 'text-blue-600', 'dark:text-blue-400');
+      
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('border-b-2', 'border-blue-600', 'dark:border-blue-400', 'text-blue-600', 'dark:text-blue-400');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNavigation);
+  updateActiveNavigation(); // Call on load
+});

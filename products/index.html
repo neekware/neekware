@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Neekware Inc. | AI-Enabled Innovation</title>
+    <meta name="description" content="Discover Neekware Inc.'s innovative products including ehAye Audio - Smart Voice for AI Coding assistants and more AI-enabled solutions.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Products - Neekware Inc. | AI-Enabled Innovation">
+    <meta property="og:description" content="Discover innovative AI-enabled products from Neekware Inc. including ehAye Audio and other cutting-edge solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neekware.com/products/">
+    <meta property="og:image" content="https://neekware.com/images/logo-large.png">
+    <meta property="og:site_name" content="Neekware Inc.">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Products - Neekware Inc.">
+    <meta name="twitter:description" content="Discover innovative AI-enabled products from Neekware Inc. including ehAye Audio and other cutting-edge solutions.">
+    <meta name="twitter:image" content="https://neekware.com/images/logo-large.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="AI products, ehAye Audio, voice AI, coding assistants, enterprise software, innovation">
+    <meta name="author" content="Neekware Inc.">
+    <link rel="canonical" href="https://neekware.com/products/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom styles -->
+    <style>
+        /* Custom animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes float-mobile {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .float-animation {
+                animation: float-mobile 6s ease-in-out infinite;
+            }
+        }
+        
+        /* Theme toggle spin animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes spin-back {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+        
+        .theme-toggle-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-toggle-btn img {
+            transition: transform 0.5s ease;
+        }
+        
+        .theme-toggle-btn:hover img {
+            transform: rotate(360deg);
+        }
+        
+        .theme-toggle-btn:not(:hover) img {
+            transform: rotate(0deg);
+        }
+        
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0f172a, #1e3a8a, #1e40af, #312e81);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+        
+        /* Dancing gradient balls */
+        @keyframes dance1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(100px, -50px) scale(1.1); }
+            50% { transform: translate(-50px, -100px) scale(0.9); }
+            75% { transform: translate(-100px, 50px) scale(1.05); }
+        }
+        
+        @keyframes dance2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(-80px, 60px) scale(0.95); }
+            50% { transform: translate(120px, -30px) scale(1.1); }
+            75% { transform: translate(60px, 80px) scale(1); }
+        }
+        
+        @keyframes dance3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(70px, 70px) scale(1.05); }
+            50% { transform: translate(-100px, 40px) scale(0.95); }
+            75% { transform: translate(-30px, -80px) scale(1.1); }
+        }
+        
+        .gradient-ball {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.7;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        
+        .ball-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            animation: dance1 20s infinite;
+            top: 10%;
+            left: 10%;
+        }
+        
+        .ball-2 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            animation: dance2 18s infinite;
+            bottom: 20%;
+            right: 15%;
+        }
+        
+        .ball-3 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            animation: dance3 22s infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Dark mode gradient balls */
+        .dark .ball-1 {
+            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+            opacity: 0.5;
+        }
+        
+        .dark .ball-2 {
+            background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+            opacity: 0.5;
+        }
+        
+        .dark .ball-3 {
+            background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+            opacity: 0.5;
+        }
+        
+        /* Mobile adjustments for gradient balls */
+        @media (max-width: 768px) {
+            .ball-1 {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .ball-2 {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .ball-3 {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .gradient-ball {
+                filter: blur(30px);
+            }
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Dark mode glass */
+        .dark .glass {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Make black SVG icons gray in dark mode */
+        .dark .icon-gray-dark {
+            filter: invert(1) opacity(0.7);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+            background: #666;
+        }
+    </style>
+    
+    <!-- Custom JavaScript -->
+    <script src="../script.js" defer></script>
+</head>
+<body x-data="{ darkMode: false, mobileMenu: false }" 
+      x-init="darkMode = localStorage.getItem('darkMode') === 'true'; $watch('darkMode', value => localStorage.setItem('darkMode', value))" 
+      :class="darkMode ? 'dark' : ''" class="transition-colors duration-300">
+    
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        
+        <!-- Navigation -->
+        <nav class="fixed w-full top-0 z-50 glass transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <a href="../" class="flex items-center">
+                        <img x-show="!darkMode" src="../images/svg/neekware-light.svg" alt="Neekware" class="h-8 w-auto">
+                        <img x-show="darkMode" src="../images/svg/neekware-dark.svg" alt="Neekware" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold">Neekware</span>
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="../#services" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Services</a>
+                        <a href="../#features" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Features</a>
+                        <a href="../#tech" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tech Stack</a>
+                        <a href="../#clients" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Clients</a>
+                        <a href="/products" class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 dark:border-blue-400">Products</a>
+                        <a href="../#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                        
+                        <!-- Theme Toggle -->
+                        <button @click="darkMode = !darkMode" 
+                                class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors theme-toggle-btn">
+                            <img x-show="!darkMode" src="../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                            <img x-show="darkMode" src="../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button @click="darkMode = !darkMode" 
+                                class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mr-2 theme-toggle-btn">
+                            <img x-show="!darkMode" src="../images/svg/sun-icon.svg" alt="Light mode" class="w-5 h-5">
+                            <img x-show="darkMode" src="../images/svg/moon-icon-light.svg" alt="Dark mode" class="w-5 h-5">
+                        </button>
+                        <button @click="mobileMenu = !mobileMenu" class="p-2">
+                            <img x-show="!darkMode" src="../images/svg/menu-icon.svg" alt="Menu" class="w-6 h-6">
+                            <img x-show="darkMode" src="../images/svg/menu-icon-light.svg" alt="Menu" class="w-6 h-6">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div x-show="mobileMenu" x-transition class="md:hidden glass">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../#services" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Services</a>
+                    <a href="../#features" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Features</a>
+                    <a href="../#tech" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Tech Stack</a>
+                    <a href="../#clients" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Clients</a>
+                    <a href="/products" @click="mobileMenu = false" class="block px-3 py-2 rounded-md bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 font-semibold">Products</a>
+                    <a href="../#contact" @click="mobileMenu = false" class="block px-3 py-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">Contact</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[50vh] py-8 pt-20 mt-[5px] mb-[5px] flex items-center justify-center relative overflow-hidden bg-white dark:bg-gray-900">
+            <!-- Dancing gradient balls -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="gradient-ball ball-1"></div>
+                <div class="gradient-ball ball-2"></div>
+                <div class="gradient-ball ball-3"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <img x-show="!darkMode" src="../images/svg/neekware-light.svg" alt="Neekware Logo" class="h-40 md:h-56 w-auto mx-auto mb-3 float-animation">
+                    <img x-show="darkMode" src="../images/svg/neekware-dark.svg" alt="Neekware Logo" class="h-40 md:h-56 w-auto mx-auto mb-3 float-animation">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-3 text-gray-900 dark:text-white">
+                        Neekware Products
+                    </h1>
+                    <h2 class="text-xl md:text-2xl font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                        AI-Enabled Innovation
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-2 max-w-3xl mx-auto">
+                        Cutting-edge tools and applications
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">
+                        Built for developers, by developers
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#products" class="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors inline-block font-semibold">
+                            Explore Our Products
+                        </a>
+                        <a href="#contact" class="px-6 py-2.5 bg-transparent border-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 dark:hover:text-white transition-colors inline-block font-semibold">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Our Products</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                        Innovative AI-enabled solutions built with enterprise-grade quality and developer-first approach
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- ehAye Audio Product Card -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 hover:shadow-xl transition-shadow group">
+                        <div class="text-center mb-6">
+                            <img src="ehaye/images/ehAye.png" alt="ehAye Audio" class="w-20 h-20 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <h3 class="text-2xl font-bold mb-2">ehAye Audio</h3>
+                            <p class="text-blue-600 dark:text-blue-400 font-semibold">Smart Voice for AI Coding</p>
+                        </div>
+                        <div class="space-y-4 mb-6 text-center">
+                            <div class="flex items-center justify-center">
+                                <span class="text-green-500 mr-3">🎭</span>
+                                <p class="text-gray-600 dark:text-gray-400">Dual voice support for AI assistants</p>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <span class="text-green-500 mr-3">⚡</span>
+                                <p class="text-gray-600 dark:text-gray-400">Real-time voice configuration</p>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <span class="text-green-500 mr-3">🔧</span>
+                                <p class="text-gray-600 dark:text-gray-400">Easy CLI management</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="ehaye/" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors inline-block font-semibold">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Card 1 -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 opacity-75 relative overflow-hidden">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Coming Soon
+                        </div>
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-blue-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-3xl">🚀</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Next Innovation</h3>
+                            <p class="text-gray-500 dark:text-gray-300 font-semibold">AI-Powered Development Tool</p>
+                        </div>
+                        <div class="space-y-4 mb-6 text-center">
+                            <div class="flex items-center justify-center">
+                                <span class="text-gray-400 mr-3">⭐</span>
+                                <p class="text-gray-500 dark:text-gray-300">Revolutionary developer experience</p>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <span class="text-gray-400 mr-3">🔮</span>
+                                <p class="text-gray-500 dark:text-gray-300">Next-generation AI integration</p>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <span class="text-gray-400 mr-3">⚡</span>
+                                <p class="text-gray-500 dark:text-gray-300">Lightning-fast performance</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button disabled class="px-6 py-2 bg-gray-400 text-white rounded-lg cursor-not-allowed font-semibold">
+                                Stay Tuned
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Card 2 -->
+                    <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 opacity-75 relative overflow-hidden">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Coming Soon
+                        </div>
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-purple-100 dark:bg-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-3xl">🎯</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Future Product</h3>
+                            <p class="text-gray-500 dark:text-gray-300 font-semibold">Enterprise AI Solution</p>
+                        </div>
+                        <div class="space-y-4 mb-6 text-center">
+                            <div class="flex items-center justify-center">
+                                <span class="text-gray-400 mr-3">🎨</span>
+                                <p class="text-gray-500 dark:text-gray-300">Innovative user experience</p>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <span class="text-gray-400 mr-3">🔒</span>
+                                <p class="text-gray-500 dark:text-gray-300">Enterprise-grade security</p>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <span class="text-gray-400 mr-3">📈</span>
+                                <p class="text-gray-500 dark:text-gray-300">Scalable architecture</p>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button disabled class="px-6 py-2 bg-gray-400 text-white rounded-lg cursor-not-allowed font-semibold">
+                                Stay Tuned
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-16">
+                    <div class="bg-blue-50 dark:bg-gray-700 rounded-2xl p-8 max-w-3xl mx-auto">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Have an Idea?</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            We're always working on new innovations. Got a suggestion or want to collaborate on the next big thing?
+                        </p>
+                        <a href="#contact" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors font-semibold">
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">We'd love to hear from you</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Office Location -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <img src="../images/svg/location-icon.svg" alt="Location" class="w-8 h-8 icon-gray-dark">
+                            <h3 class="text-xl font-semibold ml-3">Office Location</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            <strong>Neekware Inc.</strong><br>
+                            133 Weber St. N. Suite 3-204<br>
+                            Waterloo, ON N2J 3G9<br>
+                            Canada
+                        </p>
+                    </div>
+                    
+                    <!-- Direct Contact -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <img src="../images/svg/contact-icon.svg" alt="Contact" class="w-8 h-8 icon-gray-dark">
+                            <h3 class="text-xl font-semibold ml-3">Direct Contact</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <p class="text-gray-600 dark:text-gray-400">
+                                <strong>Phone:</strong><br>
+                                <a href="tel:&#43;&#49;&#50;&#50;&#54;&#52;&#55;&#54;&#49;&#53;&#54;&#57;" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                    &#43;&#49;&#32;&#40;&#50;&#50;&#54;&#41;&#32;&#52;&#55;&#54;&#45;&#49;&#53;&#54;&#57;&#32;&#40;&#69;&#120;&#58;&#32;&#51;&#48;&#48;&#41;
+                                </a>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                <strong>Email:</strong><br>
+                                <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#110;&#101;&#101;&#107;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                    &#105;&#110;&#102;&#111;&#64;&#110;&#101;&#101;&#107;&#119;&#97;&#114;&#101;&#46;&#99;&#111;&#109;
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Hours -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <img src="../images/svg/clock-icon.svg" alt="Hours" class="w-8 h-8 icon-gray-dark">
+                            <h3 class="text-xl font-semibold ml-3">Business Hours</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            <strong>Monday - Friday:</strong><br>
+                            9:00 AM - 6:00 PM EST<br><br>
+                            <strong>Saturday - Sunday:</strong><br>
+                            Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="py-8 bg-gray-900 text-gray-400">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Main footer content -->
+                <div class="flex flex-col-reverse md:flex-row md:justify-between md:items-start">
+                    <!-- Left side: Logo and copyright -->
+                    <div class="flex flex-col items-center md:flex-row text-center md:text-left justify-center md:justify-start">
+                        <a href="../" class="hidden md:flex items-center mr-2">
+                            <img x-show="!darkMode" src="../images/svg/neekware-light.svg" alt="Neekware" class="h-6 w-auto">
+                            <img x-show="darkMode" src="../images/svg/neekware-dark.svg" alt="Neekware" class="h-6 w-auto">
+                        </a>
+                        <p>&copy; 2006-<span id="currentYear"></span> Neekware Inc. All rights reserved.</p>
+                        <a href="../" class="flex md:hidden items-center justify-center mt-4 p-3 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors">
+                            <img x-show="!darkMode" src="../images/svg/neekware-light.svg" alt="Neekware" class="h-8 w-auto">
+                            <img x-show="darkMode" src="../images/svg/neekware-dark.svg" alt="Neekware" class="h-8 w-auto">
+                        </a>
+                    </div>
+                    
+                    <!-- Right side: Navigation Links -->
+                    <div class="flex items-center gap-6 mb-4 md:mb-0 justify-center md:justify-end">
+                        <a href="../#services" class="hover:text-white transition-colors">Services</a>
+                        <a href="/products" class="text-blue-400 hover:text-blue-300 transition-colors">Products</a>
+                        <a href="../#contact" class="hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
