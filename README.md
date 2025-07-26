@@ -4,8 +4,8 @@ Official website for Neekware Inc. - AI-Enabled Innovation
 
 ## Products
 
-### ehAye Audio™ (Beta)
-- **Status**: Available in Beta
+### ehAye Audio™ (Private Beta)
+- **Status**: Available in Private Beta
 - **Description**: Smart Voice for AI Coding
 - **Features**:
   - 🗣️ Audio support for AI assistants
